@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif TC", serif;
+  --font-sans: "Noto Sans TC", sans-serif;
+  --color-cream: #FAF8F4;
+  --color-beige-light: #EDE8DF;
+  --color-beige-dark: #E8E0D2;
+  --color-brown-dark: #3B3028;
+  --color-brown-text: #2E2A25;
+  --color-terracotta: #f18f5c;
+  --color-terracotta-hover: #e07d4a;
+  --color-teal-dark: #2a5a6b;
+  --color-teal-light: #4c8a9e;
+  --color-teal-gradient-start: #326273;
+  --color-teal-gradient-end: #5e9eb0;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700;900&display=swap');
+  
+  body {
+    @apply bg-cream text-brown-text font-sans antialiased;
+  }
+  h1 {
+    @apply font-serif font-black text-[3.2rem] leading-tight;
+  }
+  h2 {
+    @apply font-serif font-bold text-[2.2rem] leading-snug;
+  }
+  h3 {
+    @apply font-serif font-bold;
+  }
+}
+
+@theme {
+  --font-serif: "Noto Serif TC", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer components {
+  .hero-gradient {
+    background: radial-gradient(circle at 70% 30%, var(--color-teal-gradient-end) 0%, var(--color-teal-gradient-start) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-gradient::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+    opacity: 0.15;
+    pointer-events: none;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.markdown-body {
+  @apply font-sans leading-relaxed;
+}
