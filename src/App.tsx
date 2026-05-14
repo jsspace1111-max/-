@@ -43,7 +43,7 @@ const Navbar = () => (
     <div className="max-w-[1100px] mx-auto h-full flex items-center justify-between">
       <div className="flex items-center gap-3">
         <img 
-          src="https://attachment.ais.google.com/ais/qnb7w46cv5yg4xybpzxgdd/63c5d64e-f24f-4d9c-850d-df0333333333/logo.png" 
+          src="https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/LOGO.png" 
           alt="J.S. Space Logo" 
           className="w-10 h-10 object-contain rounded-full"
           referrerPolicy="no-referrer"
@@ -333,6 +333,40 @@ export default function App() {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Magazine Mockup Showcase */}
+          <div className="mt-24 mb-10 overflow-visible px-4">
+            <div className="flex justify-center items-center flex-wrap lg:flex-nowrap pt-12">
+              {[
+                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/2.jpg", rotate: -5, y: 15 },
+                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/12.png", rotate: 3, y: -10 },
+                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/IMG_4625.PNG", rotate: -2, y: 20 },
+                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/4%20(2).png", rotate: 4, y: 0 },
+                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/模板.jpg", rotate: -3, y: 10 }
+              ].map((img, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 40, rotate: img.rotate * 2 }}
+                  whileInView={{ opacity: 1, y: img.y, rotate: img.rotate }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1, duration: 0.8, ease: "easeOut" }}
+                  className={`relative shrink-0 ${idx === 0 || idx === 4 ? 'w-36 sm:w-48 md:w-52 lg:w-60' : 'w-44 sm:w-56 md:w-64 lg:w-72'} -ml-12 sm:-ml-16 first:ml-0 hover:z-20 transition-all cursor-pointer group`}
+                  whileHover={{ scale: 1.05, rotate: 0 }}
+                >
+                  <div className="absolute inset-0 bg-black/5 rounded-lg blur-xl translate-y-4 group-hover:opacity-0 transition-opacity"></div>
+                  <img 
+                    src={img.src} 
+                    alt={`Showcase ${idx + 1}`} 
+                    className="w-full h-auto rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/50 relative z-10"
+                    referrerPolicy="no-referrer"
+                  />
+                </motion.div>
+              ))}
+            </div>
+            <p className="text-center text-brown-text/40 text-sm mt-20 italic tracking-widest font-serif">
+              可以做出這樣的模板
+            </p>
           </div>
         </div>
       </section>
@@ -723,7 +757,7 @@ export default function App() {
       <footer className="bg-cream py-20 px-6 text-center border-t border-beige-light">
         <div className="max-w-[1100px] mx-auto flex flex-col items-center">
           <img 
-            src="https://attachment.ais.google.com/ais/qnb7w46cv5yg4xybpzxgdd/63c5d64e-f24f-4d9c-850d-df0333333333/logo.png" 
+            src="https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/LOGO.png" 
             alt="J.S. Space Logo" 
             className="w-16 h-16 object-contain rounded-full mb-6"
             referrerPolicy="no-referrer"
