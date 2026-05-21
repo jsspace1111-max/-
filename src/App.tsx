@@ -411,7 +411,6 @@ export default function App() {
             <h4 className="text-lg font-bold text-brown-dark mb-6 text-center">完成條件</h4>
             <ul className="space-y-4">
               {[
-                "不要繳交4周作業",
                 "完成一本電子手帳",
                 "填寫返現挑戰申請表",
                 "提交課程回饋"
