@@ -393,7 +393,7 @@ export default function App() {
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">💳</span>
               <span className="text-sm text-brown-text/60 mb-2 font-medium">報名費用</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,280</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$1,980</span>
             </div>
             <div className="bg-brown-dark p-10 rounded-2xl shadow-xl flex-1 flex flex-col items-center transform md:scale-110 z-10 text-white">
               <span className="text-3xl mb-4">🎁</span>
@@ -403,7 +403,7 @@ export default function App() {
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">✨</span>
               <span className="text-sm text-brown-text/60 mb-2 font-medium">實際成本</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$1,280</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$980</span>
             </div>
           </div>
 
@@ -411,8 +411,9 @@ export default function App() {
             <h4 className="text-lg font-bold text-brown-dark mb-6 text-center">完成條件</h4>
             <ul className="space-y-4">
               {[
-                "繳交4周作業",
-                "完成電子手帳作品",
+                "不要繳交4周作業",
+                "完成一本電子手帳",
+                "填寫返現挑戰申請表",
                 "提交課程回饋"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-4 text-brown-text">
@@ -437,14 +438,14 @@ export default function App() {
       {/* Value After Cashback */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$1,280，就能獲得</h2>
-          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（預購價 NT$2,280 － 完課返現 NT$1,000）</span>
+          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$980，就能獲得</h2>
+          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（預購價 NT$1,980 － 完課返現 NT$1,000）</span>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {[
               { icon: <Video className="w-6 h-6" />, title: "4 週直播陪跑課", desc: "每週四晚上 8 點，有人帶著你一步一步做" },
               { icon: <Clock className="w-6 h-6" />, title: "錄影回放一年", desc: "沒跟上直播？一年內隨時補看" },
-              { icon: <Users className="w-6 h-6" />, title: "Skool 學習社群一年", desc: "和同期學員互相支持，Jessica 在線回覆" },
+              { icon: <Users className="w-6 h-6" />, title: "Skool /LINE 學習群組一年", desc: "和同期學員互相支持，Jessica 在線回覆" },
               { icon: <Palette className="w-6 h-6" />, title: "Canva Pro 1 個月", desc: "市值 NT$400，開課前直接提供" },
               { icon: <PenTool className="w-6 h-6" />, title: "每週作業 + Jessica 回饋", desc: "不是自己做完就算，有人幫你看、給你建議" },
               { icon: <Layout className="w-6 h-6" />, title: "一本屬於你的電子手帳", desc: "從封面到跳轉，每一頁都是為你設計的" },
