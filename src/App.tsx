@@ -190,7 +190,7 @@ export default function App() {
 
       {/* Early Bird Banner */}
       <div className="bg-terracotta text-white py-4 px-6 text-center text-sm md:text-base">
-        🗓 預購優惠 NT$2,280，5/31（日）截止　｜　6/1 起 NT$2,680　｜　6/8 起 NT$3,080
+        🗓 早鳥優惠 NT$2,280，5/31（日）截止　｜　6/1 起 NT$2,880　｜　6/8 起 NT$3,680
       </div>
 
       {/* Pain Points */}
@@ -310,7 +310,7 @@ export default function App() {
               { week: "WEEK 0", title: "開幕式", icon: "🤝", desc: "了解課程節奏、課程平台使用、Canva簡單介紹，準備好開始" },
               { week: "WEEK 1", title: "認識你的需求 + 規劃手帳架構", icon: "🗺️", desc: "搞清楚自己需要什麼版面，畫出你的手帳目錄草稿" },
               { week: "WEEK 2", title: "打造手帳骨架", icon: "🏗️", desc: "封面、目錄、月計劃頁、分頁按鈕、電子貼紙製作" },
-              { week: "WEEK 3", title: "AI × Canva｜設計專屬你的頁面與素材", icon: "🎨", desc: "從顯化日記、情緒追蹤、反思回顧、記帳頁……用AI生成輔助，做出你想要的手帳主題" },
+              { week: "WEEK 3", title: "AI × Canva｜設計專屬你的頁面與素材", icon: "🎨", desc: "從顯化日記、情緒追蹤、反思回顧、記帳頁……用AI輔助，做出你想要的手帳主題" },
               { week: "WEEK 4", title: "跳轉 × 整合｜完成你的專屬手帳", icon: "🎓", desc: "製作跳轉功能，整合所有頁面、統一風格，完成屬於你的電子手帳。" },
             ].map((item, idx) => (
               <motion.div 
