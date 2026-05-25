@@ -625,7 +625,7 @@ export default function App() {
             <h3 className="text-2xl font-bold mb-4">早鳥預購優惠價格 NT$2,280</h3>
             <p className="text-white/60 mb-8 px-4">
               5/31 (日) 截止<br />
-              6/1 起 NT$2,680　｜　6/8 起 NT$3,080
+              6/1 起 NT$2,880　｜　6/8 起 NT$3,680
             </p>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
