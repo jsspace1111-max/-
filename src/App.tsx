@@ -649,7 +649,7 @@ export default function App() {
           </motion.span>
           <div className="mb-10">
             <span className="bg-red-600 text-white font-bold px-6 py-3 rounded-sm text-base md:text-lg tracking-widest inline-block animate-pulse">
-              🔥 限量 15 位
+              🔥 限量 15 位，目前剩下五個名額
             </span>
           </div>
           <h2 className="text-[2.2rem] text-brown-dark mb-10 font-bold">做好手帳之後，然後呢？</h2>
