@@ -64,7 +64,7 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date('2026-06-07T23:59:59+08:00').getTime();
+    const targetDate = new Date('2026-06-14T23:59:59+08:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -165,18 +165,18 @@ export default function App() {
           >
             顯化 x 目標 x 健康 x 習慣 x 財富，五大方向啟動人生
           </motion.p>
-          <div className="text-[0.9rem] text-brown-text/70 mb-10">
+          <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
             開課時間：2026年6月15日 – 7月13日
           </div>
 
           <div className="mb-12">
-            <span className="text-brown-text/60 text-sm font-medium mb-4 block">預購優惠價格截止倒數</span>
+            <span className="text-brown-text/70 text-base md:text-lg font-bold mb-4 block">課程開課倒數</span>
             <CountdownTimer />
           </div>
 
           <div className="flex flex-col items-center gap-6">
             <div className="text-xl">
-              預購優惠 <span className="text-terracotta text-2xl font-bold ml-1">NT$2,880</span>
+              課程報名價格 <span className="text-terracotta text-2xl font-bold ml-1">NT$3,680</span>
             </div>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
@@ -189,8 +189,8 @@ export default function App() {
       </section>
 
       {/* Early Bird Banner */}
-      <div className="bg-terracotta text-white py-4 px-6 text-center text-sm md:text-base">
-        🗓 預購優惠  NT$2,880，6/7（日）截止  ｜  6/8 起 NT$3,680
+      <div className="bg-terracotta text-white py-5 px-6 text-center text-base md:text-lg font-bold tracking-wider">
+        開課時間：2026年6月15日 – 7月13日
       </div>
 
       {/* Pain Points */}
@@ -393,7 +393,7 @@ export default function App() {
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">💳</span>
               <span className="text-sm text-brown-text/60 mb-2 font-medium">報名費用</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,880</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$3,680</span>
             </div>
             <div className="bg-brown-dark p-10 rounded-2xl shadow-xl flex-1 flex flex-col items-center transform md:scale-110 z-10 text-white">
               <span className="text-3xl mb-4">🎁</span>
@@ -403,7 +403,7 @@ export default function App() {
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">✨</span>
               <span className="text-sm text-brown-text/60 mb-2 font-medium">實際成本</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$1,880</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,680</span>
             </div>
           </div>
 
@@ -437,8 +437,8 @@ export default function App() {
       {/* Value After Cashback */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$1,880，就能獲得</h2>
-          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（早鳥價 NT$2,880 － 完課返現 NT$1,000）</span>
+          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$2,680，就能獲得</h2>
+          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（課程價格 NT$3,680 － 完課返現 NT$1,000）</span>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {[
@@ -586,8 +586,8 @@ export default function App() {
                 <span className="text-sm">－NT$1,000</span>
               </div>
               <div className="flex justify-between items-center p-6 bg-terracotta text-white font-bold">
-                <span className="text-lg">預購優惠價格</span>
-                <span className="text-2xl font-serif">NT$2,880</span>
+                <span className="text-lg">課程超值價格</span>
+                <span className="text-2xl font-serif">NT$3,680</span>
               </div>
             </div>
           </div>
@@ -622,10 +622,9 @@ export default function App() {
           </div>
 
           <div className="bg-brown-dark rounded-2xl p-12 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">預購優惠價格 NT$2,880</h3>
-            <p className="text-white/60 mb-8 px-4">
-              6/7 (日) 截止<br />
-              6/8 起 NT$3,680
+            <h3 className="text-2xl font-bold mb-4">課程價格 NT$3,680</h3>
+            <p className="text-white/80 text-base md:text-lg mb-8 px-4 font-medium">
+              開課時間：2026年6月15日 – 7月13日
             </p>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
@@ -649,7 +648,7 @@ export default function App() {
           </motion.span>
           <div className="mb-10">
             <span className="bg-red-600 text-white font-bold px-6 py-3 rounded-sm text-base md:text-lg tracking-widest inline-block animate-pulse">
-              🔥 限量 15 位，目前剩下五個名額
+              🔥 限量名額，剩下2個名額
             </span>
           </div>
           <h2 className="text-[2.2rem] text-brown-dark mb-10 font-bold">做好手帳之後，然後呢？</h2>
@@ -746,7 +745,7 @@ export default function App() {
           </div>
           
           <div className="text-xl mb-10">
-            預購優惠價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$2,880</span>
+            課程價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$3,680</span>
           </div>
           
           <a 
