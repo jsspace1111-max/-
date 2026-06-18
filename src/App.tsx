@@ -477,12 +477,71 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { text: "這次參加老師的課程真的很開心，學到了很多製作手帳的技巧——我覺得我最需要的是學會了跳轉功能！原來 Canva 除了應付工作報告之外，也可以拿來製作手帳，素材的設計風格都可以自己調整。超級感謝老師開設這一次的課程，甚至還提供了很多的靈感來源 and 販售方式！", author: "A 小姐" },
-              { text: "對於手帳新手來說，我其實根本不知道手帳長什麼樣子。幸運的是，老師提供了模板，讓我不必從零開始思考手帳應該包含哪些元素。老師還一步步指導我們操作 Canva，教導我們製作封面、導航列，還會即時在社群裡解答疑惑。即使是新手如我，也快速掌握了這些技能。", author: "L 先生" },
-              { text: "最讓我驚喜的是跳轉功能。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我學會了製作可跳轉的目錄和導航列——這對懶人來說簡直是福音！", author: "C 小姐" },
-              { text: "沒想到自己能完成一個電子手帳，也成功返現了，真的蠻感動的！以前一直使用別人設計的模板，某些欄位真的不是自己會用到的。學會自己做電子手帳後，就可以客製化頁面、欄位、美工，設計出真正符合自己使用需求的手帳，我覺得很棒！", author: "W 姐妹" },
-              { text: "一直以來都找不到理想的手帳，一直到老師開這個課，認真跟上課程，開始學著製作自己喜歡的手帳，真的很謝謝老師願意傾囊相授！這樣我每一年都不需要為了找不到手帳而煩惱，還可以擁有自己風格的手帳！一直覺得跳轉功能很難，結果沒想到老師不藏私，原來沒有這麼難，非常有趣！", author: "H 小姐" },
-              { text: "這次的課程不只讓我學到技能，老師還為我們設計好了回收路徑。感謝老師開啟返現計畫，讓我以輕鬆、無痛且有明確方向的方式，學會了一項新技能，還能推出自己的新產品！", author: "M 小姐" }
+              {
+                text: (
+                  <>
+                    這次參加老師的課程真的很開心，學到了很多製作手帳的技巧——我覺得我最需要的是{" "}
+                    <span className="text-terracotta font-bold">學會了跳轉功能！</span>{" "}
+                    原來 Canva 除了應付工作報告之外，也可以拿來製作手帳，素材的設計風格都可以自己調整。超級感謝老師開設這一次的課程，甚至還{" "}
+                    <span className="text-terracotta font-bold">提供了很多的靈感來源 and 販售方式！</span>
+                  </>
+                ),
+                author: "A 小姐"
+              },
+              {
+                text: (
+                  <>
+                    對於手帳新手來說，我其實根本不知道手帳長什麼樣子。幸運的是，{" "}
+                    <span className="text-terracotta font-bold">老師提供了模板，讓我不必從零開始思考</span>{" "}
+                    手帳應該包含哪些元素。老師還一步步指導我們操作 Canva，教導我們製作封面、導航列，還會{" "}
+                    <span className="text-terracotta font-bold">即時在社群裡解答疑惑</span>。即使是新手如我，也{" "}
+                    <span className="text-terracotta font-bold">快速掌握了這些技能</span>。
+                  </>
+                ),
+                author: "L 先生"
+              },
+              {
+                text: (
+                  <>
+                    <span className="text-terracotta font-bold">最讓我驚喜的是跳轉功能</span>。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我{" "}
+                    <span className="text-terracotta font-bold">學會了製作可跳轉的目錄和導航列——這對懶人來說簡直是福音！</span>
+                  </>
+                ),
+                author: "C 小姐"
+              },
+              {
+                text: (
+                  <>
+                    沒想到自己能完成一個電子手帳，也{" "}
+                    <span className="text-terracotta font-bold">成功返現了，真的蠻感動的！</span>{" "}
+                    以前一直使用別人設計的模板，某些欄位真的不是自己會用到的。學會自己做電子手帳後，就可以{" "}
+                    <span className="text-terracotta font-bold">客製化頁面、欄位、美工，設計出真正符合自己使用需求的手帳</span>，我覺得很棒！
+                  </>
+                ),
+                author: "W 姐妹"
+              },
+              {
+                text: (
+                  <>
+                    一直以來都找不到理想的手帳，一直到老師開這個課，認真跟上課程，開始學著製作自己喜歡的手帳，真的很謝謝老師願意傾囊相授！這樣我每一年都{" "}
+                    <span className="text-terracotta font-bold">不需要為了找不到手帳而煩惱，還可以擁有自己風格的手帳！</span>{" "}
+                    一直覺得跳轉功能很難，結果沒想到老師不藏私，{" "}
+                    <span className="text-terracotta font-bold">原來沒有這麼難，非常有趣！</span>
+                  </>
+                ),
+                author: "H 小姐"
+              },
+              {
+                text: (
+                  <>
+                    這次的課程不只讓我學到技能，老師還為我們{" "}
+                    <span className="text-terracotta font-bold">設計好了回收路徑</span>。感謝老師開啟返現計畫，讓我以{" "}
+                    <span className="text-terracotta font-bold">輕鬆、無痛且有明確方向的方式</span>，學會了一項新技能，還能{" "}
+                    <span className="text-terracotta font-bold">推出自己的新產品！</span>
+                  </>
+                ),
+                author: "M 小姐"
+              }
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -494,9 +553,9 @@ export default function App() {
               >
                 <div>
                   <div className="text-terracotta/20 text-5xl font-serif absolute top-4 left-4 group-hover:text-terracotta/40 transition-colors">“</div>
-                  <p className="text-[0.95rem] text-brown-text leading-relaxed relative z-10 pt-4 italic">
+                  <div className="text-[0.95rem] text-brown-text leading-relaxed relative z-10 pt-4 italic">
                     {item.text}
-                  </p>
+                  </div>
                 </div>
                 <div className="mt-6 pt-4 border-t border-dashed border-beige-light text-right text-sm text-brown-text/60 font-medium font-mono">
                   ———— {item.author}
@@ -612,7 +671,7 @@ export default function App() {
               </thead>
               <tbody className="bg-white divide-y divide-beige-light">
                 {[
-                  { feature: "重新設計你的人生與生活掌控", own: "✅ 五大方向核心引導", shop: "❌ 單純記錄", pref: "❌ 僅教工具基礎" },
+                  { feature: "重新設計你的人生與生活掌控", own: "✅ 覺察核心引導", shop: "❌ 單純記錄", pref: "❌ 僅教工具基礎" },
                   { feature: "適合自己的版面", own: "✅ 完全客製", shop: "❌ 固定格式", pref: "⚠️ 要自己摸索" },
                   { feature: "即時解惑", own: "✅ 直播當場問", shop: "❌ 沒有", pref: "❌ 沒有" },
                   { feature: "有人陪你做完", own: "✅ 4 週陪跑", shop: "❌ 沒有", pref: "❌ 沒有" },
