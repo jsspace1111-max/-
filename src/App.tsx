@@ -155,7 +155,7 @@ export default function App() {
             transition={{ delay: 0.1 }}
             className="text-[2.5rem] md:text-[3.8rem] text-brown-dark leading-tight mb-8 font-bold"
           >
-            2027 重新設計人生<br className="hidden md:block" />專屬人生手帳返現計劃
+            2027 重新設計人生<br className="hidden md:block" />人生手帳陪跑返現計劃
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
@@ -663,9 +663,10 @@ export default function App() {
           <div className="max-w-[600px] mx-auto bg-white rounded-3xl shadow-2xl border-l-[12px] border-l-terracotta overflow-hidden text-left transform hover:scale-[1.02] transition-all duration-300">
             <div className="p-10 border-b border-beige-light flex justify-between items-center bg-beige-light/30">
               <div>
-                <span className="text-[0.9rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 數位產品上架課程</span>
+                <span className="text-[1.05rem] md:text-[1.1rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 數位產品上架課程</span>
                 <span className="text-sm text-brown-text/60">加購優惠</span>
-                <span className="text-xs text-brown-text/40 block line-through mt-1">原價 NT$3,280</span>
+                <span className="text-xs text-brown-text/40 block line-through mt-1">原價 NT$3,680</span>
+                <span className="text-xs text-brown-dark/80 block mt-2 font-semibold">課程預計開課日期 (10月初) ｜ 共2場線上直播</span>
               </div>
               <div className="text-terracotta font-serif text-3xl font-bold italic">NT$2,080</div>
             </div>
