@@ -64,7 +64,7 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date('2026-06-14T23:59:59+08:00').getTime();
+    const targetDate = new Date('2026-07-26T23:59:59+08:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -155,7 +155,7 @@ export default function App() {
             transition={{ delay: 0.1 }}
             className="text-[2.5rem] md:text-[3.8rem] text-brown-dark leading-tight mb-8 font-bold"
           >
-            成為自己人生的設計師<br className="hidden md:block" />・手帳陪跑返現計畫
+            2027 重新設計人生<br className="hidden md:block" />專屬人生手帳返現計劃
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
@@ -166,17 +166,17 @@ export default function App() {
             顯化 x 目標 x 健康 x 習慣 x 財富，五大方向啟動人生
           </motion.p>
           <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
-            開課時間：2026年6月15日 – 7月13日
+            第二季開課時間 : 2026.8.27 - 9.17
           </div>
 
           <div className="mb-12">
-            <span className="text-brown-text/70 text-base md:text-lg font-bold mb-4 block">課程開課倒數</span>
+            <span className="text-brown-text/70 text-base md:text-lg font-bold mb-4 block">第二季超早鳥優惠</span>
             <CountdownTimer />
           </div>
 
           <div className="flex flex-col items-center gap-6">
             <div className="text-xl">
-              課程報名價格 <span className="text-terracotta text-2xl font-bold ml-1">NT$3,680</span>
+              超早鳥優惠價格 <span className="text-red-600 text-3xl font-extrabold ml-1">NT$2,680</span>
             </div>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
@@ -190,7 +190,7 @@ export default function App() {
 
       {/* Early Bird Banner */}
       <div className="bg-terracotta text-white py-5 px-6 text-center text-base md:text-lg font-bold tracking-wider">
-        開課時間：2026年6月15日 – 7月13日
+        🗓 超早鳥優惠 NT$2,680，7/26（日）截止 ｜ 7/27 起 NT$3,280 | 8/10 起原價 NT$4,080
       </div>
 
       {/* Pain Points */}
@@ -295,7 +295,8 @@ export default function App() {
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-[1.8rem] text-brown-dark text-center mb-6">這堂課帶你做什麼？</h2>
           <p className="text-center text-brown-text mb-16 max-w-2xl mx-auto leading-relaxed">
-            這是一堂從規劃到完成的陪跑課。不只教你怎麼用 Canva，而是帶你做出一本你真的會用的電子手帳——從架構設計、版面美化，到跳轉功能，4 週全包。
+            這是一堂從規劃到完成的陪跑課。不只教你怎麼用 Canva，而是帶你做出一本你真的會用的電子手帳——從架構設計、版面美化，到跳轉功能，4 週全包。<br className="hidden md:block" />
+            <span className="text-terracotta font-bold mt-2 inline-block">「這不只是教你用 Canva 做手帳，這是一堂陪你重新設計人生的課。」</span>
           </p>
         </div>
       </section>
@@ -307,11 +308,12 @@ export default function App() {
           
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
-              { week: "WEEK 0", title: "開幕式", icon: "🤝", desc: "了解課程節奏、課程平台使用、Canva簡單介紹，準備好開始" },
+              { week: "WEEK 0", title: "開幕式 | 覺察你現在的生活", icon: "🤝", desc: "了解課程節奏、課程平台使用、Canva簡單介紹，準備好開始" },
               { week: "WEEK 1", title: "認識你的需求 + 規劃手帳架構", icon: "🗺️", desc: "搞清楚自己需要什麼版面，畫出你的手帳目錄草稿" },
               { week: "WEEK 2", title: "打造手帳骨架", icon: "🏗️", desc: "封面、目錄、月計劃頁、分頁按鈕、電子貼紙製作" },
               { week: "WEEK 3", title: "AI × Canva｜設計專屬你的頁面與素材", icon: "🎨", desc: "從顯化日記、情緒追蹤、反思回顧、記帳頁……用AI輔助，做出你想要的手帳主題" },
               { week: "WEEK 4", title: "跳轉 × 整合｜完成你的專屬手帳", icon: "🎓", desc: "製作跳轉功能，整合所有頁面、統一風格，完成屬於你的電子手帳。" },
+              { week: "WEEK 5", title: "成為自己的人生設計師", icon: "🌟", desc: "結業式與成果發表，和大家分享重新設計人生的過程、心得與學員反饋。" },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -324,7 +326,7 @@ export default function App() {
                   <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl shadow-sm border border-beige-light z-10 shrink-0">
                     {item.icon}
                   </div>
-                  {idx < 4 && <div className="w-[2px] bg-terracotta/20 flex-grow my-2"></div>}
+                  {idx < 5 && <div className="w-[2px] bg-terracotta/20 flex-grow my-2"></div>}
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-sm border border-beige-light border-l-4 border-l-terracotta flex-grow">
                   <span className="text-[0.7rem] font-bold text-terracotta uppercase tracking-[0.2em] mb-1 block">{item.week}</span>
@@ -392,8 +394,8 @@ export default function App() {
           <div className="flex flex-col md:flex-row gap-8 justify-center max-w-[900px] mx-auto mb-16 px-4">
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">💳</span>
-              <span className="text-sm text-brown-text/60 mb-2 font-medium">報名費用</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$3,680</span>
+              <span className="text-sm text-brown-text/60 mb-2 font-medium">第二季超早鳥優惠</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,680</span>
             </div>
             <div className="bg-brown-dark p-10 rounded-2xl shadow-xl flex-1 flex flex-col items-center transform md:scale-110 z-10 text-white">
               <span className="text-3xl mb-4">🎁</span>
@@ -403,7 +405,7 @@ export default function App() {
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">✨</span>
               <span className="text-sm text-brown-text/60 mb-2 font-medium">實際成本</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,680</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$1,680</span>
             </div>
           </div>
 
@@ -411,9 +413,9 @@ export default function App() {
             <h4 className="text-lg font-bold text-brown-dark mb-6 text-center">完成條件</h4>
             <ul className="space-y-4">
               {[
-                "完成一本電子手帳",
-                "填寫返現挑戰申請表",
-                "提交課程回饋"
+                "重新設計你的人生",
+                "完成一本專屬你的人生手帳",
+                "填寫返現挑戰申請表"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-4 text-brown-text">
                   <div className="w-6 h-6 bg-terracotta rounded-full flex items-center justify-center shrink-0">
@@ -429,7 +431,7 @@ export default function App() {
             whileInView={{ opacity: 1 }}
             className="text-lg md:text-xl text-brown-dark font-bold mt-10 tracking-wide bg-terracotta/10 inline-block px-8 py-3 rounded-full border border-terracotta/20"
           >
-            申請期限：課程結束後 6 週內（至 2026/08/18）
+            申請期限：課程結束後 4 週內（至 2026/09/15）
           </motion.p>
         </div>
       </section>
@@ -474,25 +476,30 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "這次參加老師的課程真的很開心，學到了很多製作手帳的技巧——我覺得我最需要的是學會了跳轉功能！原來 Canva 除了應付工作報告之外，也可以拿來製作手帳，素材的設計風格都可以自己調整。超級感謝老師開設這一次的課程，甚至還提供了很多的靈感來源和販售方式！",
-              "對於手帳新手來說，我其實根本不知道手帳長什麼樣子。幸運的是，老師提供了模板，讓我不必從零開始思考手帳應該包含哪些元素。老師還一步步指導我們操作 Canva，教導我們製作封面、導航列，還會即時在社群裡解答疑惑。即使是新手如我，也快速掌握了這些技能。",
-              "最讓我驚喜的是跳轉功能。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我學會了製作可跳轉的目錄和導航列——這對懶人來說簡直是福音！",
-              "沒想到自己能完成一個電子手帳，也成功返現了，真的蠻感動的！以前一直使用別人設計的模板，某些欄位真的不是自己會用到的。學會自己做電子手帳後，就可以客製化頁面、欄位、美工，設計出真正符合自己使用需求的手帳，我覺得很棒！",
-              "一直以來都找不到理想的手帳，一直到老師開這個課，認真跟上課程，開始學著製作自己喜歡的手帳，真的很謝謝老師願意傾囊相授！這樣我每一年都不需要為了找不到手帳而煩惱，還可以擁有自己風格的手帳！一直覺得跳轉功能很難，結果沒想到老師不藏私，原來沒有這麼難，非常有趣！",
-              "這次的課程不只讓我學到技能，老師還為我們設計好了回收路徑。感謝老師開啟返現計畫，讓我以輕鬆、無痛且有明確方向的方式，學會了一項新技能，還能推出自己的新產品！"
-            ].map((text, idx) => (
+              { text: "這次參加老師的課程真的很開心，學到了很多製作手帳的技巧——我覺得我最需要的是學會了跳轉功能！原來 Canva 除了應付工作報告之外，也可以拿來製作手帳，素材的設計風格都可以自己調整。超級感謝老師開設這一次的課程，甚至還提供了很多的靈感來源 and 販售方式！", author: "A 小姐" },
+              { text: "對於手帳新手來說，我其實根本不知道手帳長什麼樣子。幸運的是，老師提供了模板，讓我不必從零開始思考手帳應該包含哪些元素。老師還一步步指導我們操作 Canva，教導我們製作封面、導航列，還會即時在社群裡解答疑惑。即使是新手如我，也快速掌握了這些技能。", author: "L 先生" },
+              { text: "最讓我驚喜的是跳轉功能。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我學會了製作可跳轉的目錄和導航列——這對懶人來說簡直是福音！", author: "C 小姐" },
+              { text: "沒想到自己能完成一個電子手帳，也成功返現了，真的蠻感動的！以前一直使用別人設計的模板，某些欄位真的不是自己會用到的。學會自己做電子手帳後，就可以客製化頁面、欄位、美工，設計出真正符合自己使用需求的手帳，我覺得很棒！", author: "W 姐妹" },
+              { text: "一直以來都找不到理想的手帳，一直到老師開這個課，認真跟上課程，開始學著製作自己喜歡的手帳，真的很謝謝老師願意傾囊相授！這樣我每一年都不需要為了找不到手帳而煩惱，還可以擁有自己風格的手帳！一直覺得跳轉功能很難，結果沒想到老師不藏私，原來沒有這麼難，非常有趣！", author: "H 小姐" },
+              { text: "這次的課程不只讓我學到技能，老師還為我們設計好了回收路徑。感謝老師開啟返現計畫，讓我以輕鬆、無痛且有明確方向的方式，學會了一項新技能，還能推出自己的新產品！", author: "M 小姐" }
+            ].map((item, idx) => (
               <motion.div 
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-beige-light flex flex-col relative group hover:shadow-md transition-shadow"
+                className="bg-white p-8 rounded-2xl shadow-sm border border-beige-light flex flex-col justify-between relative group hover:shadow-md transition-shadow"
               >
-                <div className="text-terracotta/20 text-5xl font-serif absolute top-4 left-4 group-hover:text-terracotta/40 transition-colors">“</div>
-                <p className="text-[0.95rem] text-brown-text leading-relaxed relative z-10 pt-4 italic">
-                  {text}
-                </p>
+                <div>
+                  <div className="text-terracotta/20 text-5xl font-serif absolute top-4 left-4 group-hover:text-terracotta/40 transition-colors">“</div>
+                  <p className="text-[0.95rem] text-brown-text leading-relaxed relative z-10 pt-4 italic">
+                    {item.text}
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-dashed border-beige-light text-right text-sm text-brown-text/60 font-medium font-mono">
+                  ———— {item.author}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -566,28 +573,24 @@ export default function App() {
           <div className="max-w-3xl mx-auto bg-beige-light rounded-xl overflow-hidden shadow-sm mb-16">
             <div className="divide-y divide-beige-dark/50">
               <div className="flex justify-between p-6">
-                <span className="text-sm">4 週直播陪跑課 + 錄影回放一年 + Skool 社群</span>
+                <span className="text-sm">4 週直播陪跑課 + 錄影回放一年 + Skool 社群 + LINE社群即時回覆</span>
                 <span className="text-sm">NT$5,600</span>
               </div>
               <div className="flex justify-between p-6">
-                <span className="text-sm">Canva Pro 1 個月</span>
-                <span className="text-sm">NT$400</span>
-              </div>
-              <div className="flex justify-between p-6">
                 <span className="text-sm">每週作業 + Jessica 回饋</span>
-                <span className="text-sm">NT$2,000</span>
+                <span className="text-sm">NT$5,000</span>
               </div>
               <div className="flex justify-between p-6 font-bold">
                 <span className="text-sm">總價值</span>
-                <span className="text-sm">NT$8,000</span>
+                <span className="text-sm">NT$10,600</span>
               </div>
               <div className="flex justify-between p-6 text-terracotta">
                 <span className="text-sm">完課返現</span>
                 <span className="text-sm">－NT$1,000</span>
               </div>
               <div className="flex justify-between items-center p-6 bg-terracotta text-white font-bold">
-                <span className="text-lg">課程超值價格</span>
-                <span className="text-2xl font-serif">NT$3,680</span>
+                <span className="text-lg">第二季超早鳥優惠</span>
+                <span className="text-2xl font-serif">NT$2,680</span>
               </div>
             </div>
           </div>
@@ -604,6 +607,7 @@ export default function App() {
               </thead>
               <tbody className="bg-white divide-y divide-beige-light">
                 {[
+                  { feature: "重新設計你的人生與生活掌控", own: "✅ 五大方向核心引導", shop: "❌ 單純記錄", pref: "❌ 僅教工具基礎" },
                   { feature: "適合自己的版面", own: "✅ 完全客製", shop: "❌ 固定格式", pref: "⚠️ 要自己摸索" },
                   { feature: "即時解惑", own: "✅ 直播當場問", shop: "❌ 沒有", pref: "❌ 沒有" },
                   { feature: "有人陪你做完", own: "✅ 4 週陪跑", shop: "❌ 沒有", pref: "❌ 沒有" },
@@ -622,9 +626,9 @@ export default function App() {
           </div>
 
           <div className="bg-brown-dark rounded-2xl p-12 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">課程價格 NT$3,680</h3>
+            <h3 className="text-2xl font-bold mb-4">超早鳥優惠價格 NT$2,680</h3>
             <p className="text-white/80 text-base md:text-lg mb-8 px-4 font-medium">
-              開課時間：2026年6月15日 – 7月13日
+              優惠期限 : 2026.7.26
             </p>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
@@ -646,11 +650,6 @@ export default function App() {
           >
             加購方案
           </motion.span>
-          <div className="mb-10">
-            <span className="bg-red-600 text-white font-bold px-6 py-3 rounded-sm text-base md:text-lg tracking-widest inline-block animate-pulse">
-              🔥 限量名額，剩下2個名額
-            </span>
-          </div>
           <h2 className="text-[2.2rem] text-brown-dark mb-10 font-bold">做好手帳之後，然後呢？</h2>
           <p className="text-brown-text mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
             如果你做完這本手帳，開始想著——「這個可以分享嗎？可以販售嗎？」那這個加購就是為你準備的。
@@ -661,20 +660,21 @@ export default function App() {
               <div>
                 <span className="text-[0.9rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 數位產品上架課程</span>
                 <span className="text-sm text-brown-text/60">加購優惠</span>
+                <span className="text-xs text-brown-text/40 block line-through mt-1">原價 NT$3,280</span>
               </div>
-              <div className="text-terracotta font-serif text-3xl font-bold italic">NT$1,299</div>
+              <div className="text-terracotta font-serif text-3xl font-bold italic">NT$2,080</div>
             </div>
             <div className="p-10 space-y-6">
               {[
-                { icon: "💡", text: "訂價策略" },
+                { icon: "💡", text: "數位產品訂價策略" },
                 { icon: "🛒", text: "上架平台選擇" },
-                { icon: "🖼️", text: "產品圖製作" },
-                { icon: "📣", text: "協助上架與曝光" },
-                { icon: "🗓️", text: "30 分鐘一對一諮詢 - 銷售策略、品牌經營、數位產品" },
+                { icon: "🖼️", text: "數位產品上架圖製作" },
+                { icon: "📣", text: "協助J.S. Space平台上架與社群曝光" },
+                { icon: "🗓️", text: "30 分鐘一對一諮詢 - 數位產品銷售策略、品牌經營" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 text-brown-dark text-lg font-medium">
                   <span className="p-2 bg-beige-light rounded-lg">{item.icon}</span>
-                  <span>{item.text}</span>
+                  <span className="leading-snug">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -723,7 +723,7 @@ export default function App() {
             />
             <FAQItem 
               question="Q：返現怎麼申請？" 
-              answer="完成一本手帳並提交學員回饋，在課程結束後 6 週內（2026/08/18 前）填寫申請表單。" 
+              answer="完課並填寫返現挑戰申請表，在課程結束後 4 週內（2026/09/15 前）填寫申請表單。" 
             />
             <FAQItem 
               question="Q：付款後如何加入課程？" 
@@ -736,7 +736,7 @@ export default function App() {
       {/* Final CTA */}
       <section className="bg-beige-light px-6 py-24 text-center">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[2.8rem] text-brown-dark mb-10">做一本屬於你的人生手帳</h2>
+          <h2 className="text-[2.8rem] text-brown-dark mb-10">重新開始設計你的人生</h2>
           <div className="text-lg text-brown-text mb-12 space-y-1">
             <p>你不需要設計天分。</p>
             <p>你不需要先學會 Canva。</p>
@@ -745,7 +745,7 @@ export default function App() {
           </div>
           
           <div className="text-xl mb-10">
-            課程價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$3,680</span>
+            第二季超早鳥優惠價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$2,680</span>
           </div>
           
           <a 
