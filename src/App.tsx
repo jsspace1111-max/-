@@ -170,7 +170,7 @@ export default function App() {
           </div>
 
           <div className="mb-12">
-            <span className="text-brown-text/70 text-base md:text-lg font-bold mb-4 block">第二季超早鳥優惠</span>
+            <span className="text-brown-text/70 text-base md:text-lg font-bold mb-4 block">第二季超早鳥優惠倒數</span>
             <CountdownTimer />
           </div>
 
@@ -414,8 +414,9 @@ export default function App() {
             <ul className="space-y-4">
               {[
                 "重新設計你的人生",
-                "完成一本專屬你的人生手帳",
-                "填寫返現挑戰申請表"
+                "完成一本專屬人生手帳",
+                "填寫返現挑戰申請表",
+                "提交課程心得回饋"
               ].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-4 text-brown-text">
                   <div className="w-6 h-6 bg-terracotta rounded-full flex items-center justify-center shrink-0">
@@ -444,10 +445,10 @@ export default function App() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {[
+              { icon: <Star className="w-6 h-6" />, title: "為2027重新設計人生", desc: "重新設計人生、對生活更有掌控感" },
               { icon: <Video className="w-6 h-6" />, title: "4 週直播陪跑課", desc: "每週四晚上 8 點，有人帶著你一步一步做" },
               { icon: <Clock className="w-6 h-6" />, title: "錄影回放一年", desc: "沒跟上直播？一年內隨時補看" },
               { icon: <Users className="w-6 h-6" />, title: "Skool /LINE 學習群組一年", desc: "和同期學員互相支持，Jessica 在線回覆" },
-              { icon: <Palette className="w-6 h-6" />, title: "Canva Pro 1 個月", desc: "市值 NT$400，開課前直接提供" },
               { icon: <PenTool className="w-6 h-6" />, title: "每週作業 + Jessica 回饋", desc: "不是自己做完就算，有人幫你看、給你建議" },
               { icon: <Layout className="w-6 h-6" />, title: "一本屬於你的電子手帳", desc: "從封面到跳轉，每一頁都是為你設計的" },
             ].map((item, idx) => (
@@ -573,8 +574,12 @@ export default function App() {
           <div className="max-w-3xl mx-auto bg-beige-light rounded-xl overflow-hidden shadow-sm mb-16">
             <div className="divide-y divide-beige-dark/50">
               <div className="flex justify-between p-6">
-                <span className="text-sm">4 週直播陪跑課 + 錄影回放一年 + Skool 社群 + LINE社群即時回覆</span>
+                <span className="text-sm">4 週直播陪跑課 + 錄影回放一年</span>
                 <span className="text-sm">NT$5,600</span>
+              </div>
+              <div className="flex justify-between p-6">
+                <span className="text-sm">Skool 社群 + LINE社群即時回覆</span>
+                <span className="text-sm">NT$3,600</span>
               </div>
               <div className="flex justify-between p-6">
                 <span className="text-sm">每週作業 + Jessica 回饋</span>
@@ -582,7 +587,7 @@ export default function App() {
               </div>
               <div className="flex justify-between p-6 font-bold">
                 <span className="text-sm">總價值</span>
-                <span className="text-sm">NT$10,600</span>
+                <span className="text-sm">NT$14,200</span>
               </div>
               <div className="flex justify-between p-6 text-terracotta">
                 <span className="text-sm">完課返現</span>
