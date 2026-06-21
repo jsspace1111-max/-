@@ -64,7 +64,7 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date('2026-07-26T23:59:59+08:00').getTime();
+    const targetDate = new Date('2026-08-02T23:59:59+08:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -166,7 +166,7 @@ export default function App() {
             顯化 x 目標 x 健康 x 習慣 x 財富，五大方向啟動人生
           </motion.p>
           <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
-            第二季開課時間 : 2026.8.27 - 9.17
+            第二季開課時間 : 2026.9.3 - 9.24
           </div>
 
           <div className="mb-12">
@@ -190,7 +190,7 @@ export default function App() {
 
       {/* Early Bird Banner */}
       <div className="bg-terracotta text-white py-5 px-6 text-center text-base md:text-lg font-bold tracking-wider">
-        🗓 超早鳥優惠 NT$2,680，7/26（日）截止 ｜ 7/27 起 NT$3,280 | 8/10 起原價 NT$4,080
+        🗓 超早鳥優惠 NT$2,680，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/17 起原價 NT$4,080
       </div>
 
       {/* Pain Points */}
@@ -432,7 +432,7 @@ export default function App() {
             whileInView={{ opacity: 1 }}
             className="text-lg md:text-xl text-brown-dark font-bold mt-10 tracking-wide bg-terracotta/10 inline-block px-8 py-3 rounded-full border border-terracotta/20"
           >
-            申請期限：課程結束後 4 週內（至 2026/09/15）
+            申請期限：課程結束後 4 週內（至 2026/10/22）
           </motion.p>
         </div>
       </section>
@@ -440,8 +440,8 @@ export default function App() {
       {/* Value After Cashback */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$2,680，就能獲得</h2>
-          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（課程價格 NT$3,680 － 完課返現 NT$1,000）</span>
+          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$1,680，就能獲得</h2>
+          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（課程價格 NT$2,680 － 完課返現 NT$1,000）</span>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {[
@@ -692,7 +692,7 @@ export default function App() {
           <div className="bg-brown-dark rounded-2xl p-12 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">超早鳥優惠價格 NT$2,680</h3>
             <p className="text-white/80 text-base md:text-lg mb-8 px-4 font-medium">
-              優惠期限 : 2026.7.26
+              優惠期限 : 2026.8.2
             </p>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
@@ -725,7 +725,7 @@ export default function App() {
                 <span className="text-[1.05rem] md:text-[1.1rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 數位產品上架課程</span>
                 <span className="text-sm text-brown-text/60">加購優惠</span>
                 <span className="text-xs text-brown-text/40 block line-through mt-1">原價 NT$3,680</span>
-                <span className="text-xs text-brown-dark/80 block mt-2 font-semibold">課程預計開課日期 (10月初) ｜ 共2場線上直播</span>
+                <span className="text-xs text-brown-dark/80 block mt-2 font-semibold">課程預計開課日期 (10月中) ｜ 共2場線上直播</span>
               </div>
               <div className="text-terracotta font-serif text-3xl font-bold italic">NT$2,080</div>
             </div>
@@ -788,7 +788,7 @@ export default function App() {
             />
             <FAQItem 
               question="Q：返現怎麼申請？" 
-              answer="完課並填寫返現挑戰申請表，在課程結束後 4 週內（2026/09/15 前）填寫申請表單。" 
+              answer="完課並填寫返現挑戰申請表，在課程結束後 4 週內（2026/10/22 前）填寫申請表單。" 
             />
             <FAQItem 
               question="Q：付款後如何加入課程？" 
