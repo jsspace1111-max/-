@@ -722,7 +722,7 @@ export default function App() {
           <div className="max-w-[600px] mx-auto bg-white rounded-3xl shadow-2xl border-l-[12px] border-l-terracotta overflow-hidden text-left transform hover:scale-[1.02] transition-all duration-300">
             <div className="p-10 border-b border-beige-light flex justify-between items-center bg-beige-light/30">
               <div>
-                <span className="text-[1.05rem] md:text-[1.1rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 數位產品上架課程</span>
+                <span className="text-[1.05rem] md:text-[1.1rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 J.S. Space 創作者計畫</span>
                 <span className="text-sm text-brown-text/60">加購優惠</span>
                 <span className="text-xs text-brown-text/40 block line-through mt-1">原價 NT$3,680</span>
                 <span className="text-xs text-brown-dark/80 block mt-2 font-semibold">課程預計開課日期 (10月中) ｜ 共2場線上直播</span>
@@ -735,7 +735,7 @@ export default function App() {
                 { icon: "🛒", text: "上架平台選擇" },
                 { icon: "🖼️", text: "數位產品上架圖製作" },
                 { icon: "📣", text: "協助J.S. Space平台上架與社群曝光" },
-                { icon: "🗓️", text: "30 分鐘一對一諮詢 - 數位產品銷售策略、品牌經營" },
+                { icon: "🗓️", text: "一對一30分鐘上架健檢 - 數位產品銷售策略、品牌經營" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 text-brown-dark text-lg font-medium">
                   <span className="p-2 bg-beige-light rounded-lg">{item.icon}</span>
@@ -745,7 +745,7 @@ export default function App() {
             </div>
             <div className="p-10 pt-0">
               <button className="w-full bg-terracotta text-white font-bold py-5 rounded-2xl hover:bg-terracotta-hover transition-all text-xl shadow-xl shadow-terracotta/30">
-                加購數位產品課程 →
+                加購 J.S. Space 創作者計畫 →
               </button>
             </div>
           </div>
@@ -784,7 +784,7 @@ export default function App() {
             />
             <FAQItem 
               question="Q：做好的手帳可以拿來販售嗎？" 
-              answer="可以。你可以在自己的平台上架販售，或是加購數位產品上架方案，會有完整的上架與銷售流程。" 
+              answer="可以。你可以在自己的平台上架販售，或是加購 J.S. Space 創作者計畫，會有完整的上架與銷售流程。" 
             />
             <FAQItem 
               question="Q：返現怎麼申請？" 
