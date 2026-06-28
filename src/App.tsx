@@ -163,7 +163,7 @@ export default function App() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-terracotta max-w-3xl mx-auto mb-10 leading-relaxed font-bold tracking-wider"
           >
-            顯化 x 目標 x 健康 x 習慣 x 財富，五大方向啟動人生
+            用五大方向重新設計你的 2027
           </motion.p>
           <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
             第二季開課時間 : 2026.9.3 - 9.24
@@ -196,20 +196,23 @@ export default function App() {
       {/* Pain Points */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[1.8rem] text-brown-dark text-center mb-10">你有沒有這樣的經驗？</h2>
+          <h2 className="text-[1.8rem] text-brown-dark text-center mb-10">你有沒有發現⋯</h2>
           <p className="text-center text-brown-text mb-16 max-w-3xl mx-auto leading-relaxed">
-            你有沒有買過電子手帳模板，下載了，翻了幾次就再也沒打開過？<br /><br />
-            不是不想用。只是打開來，看到那個版面，感覺不太適合自己。<br /><br />
-            欄位不對、風格不喜歡、有幾頁根本用不到……於是資料夾裡多了很多檔案，但沒有一個真正用完過。<br /><br />
-            你告訴自己「是我不夠自律」。但你其實只是還沒遇到一本真正為你設計的手帳。
+            明明很想把日子過好，卻總是卡在同一個地方。<br /><br />
+            腦子裡有一百個想法，卻一個都沒真的開始。<br /><br />
+            好不容易下定決心，過幾天又回到原樣。<br /><br />
+            買過手帳、上過課、立過目標，最後都安靜地躺在某個資料夾裡。<br /><br />
+            然後你告訴自己：是不是我不夠自律、不夠堅持？<br /><br />
+            但其實不是。<br /><br />
+            你缺 of 意志力，是一套真正為你設計、能陪你走一整年的系統。
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { icon: <Folder className="w-6 h-6 text-terracotta" />, title: "模板買了一個又一個", desc: "每次都覺得這次會用，結果資料夾裡靜靜躺著一堆沒打開的檔案。" },
-              { icon: <Layout className="w-6 h-6 text-terracotta" />, title: "版面永遠差那麼一點", desc: "有你用不到的欄位，缺少你真正需要的頁面。" },
-              { icon: <Palette className="w-6 h-6 text-terracotta" />, title: "設計不喜歡，就不想打開", desc: "美感不對，打開的動力就少了一半，久了就擱著不用。" },
-              { icon: <MessageCircle className="w-6 h-6 text-terracotta" />, title: "以為是自己不夠自律", desc: "你告訴自己「也許是我不夠堅持」——但其實不是這樣的。" },
+              { icon: <Folder className="w-6 h-6 text-terracotta" />, title: "想法很多，卻難以落地", desc: "腦子裡有一百個關於未來的規劃，卻因為不知道如何開始，最後一個都沒有動工。" },
+              { icon: <Layout className="w-6 h-6 text-terracotta" />, title: "目標總是流於形式", desc: "年初寫下的滿滿大計，到了年中已經想不起放在哪裡，生活還是照著舊軌道運轉。" },
+              { icon: <Palette className="w-6 h-6 text-terracotta" />, title: "工具很多，卻沒有系統", desc: "買過手帳、用過筆記軟體，但沒有一套真正能支撐你、融入日常的陪跑系統。" },
+              { icon: <MessageCircle className="w-6 h-6 text-terracotta" />, title: "容易陷入自我懷疑", desc: "卡關的時候，總覺得是自己不夠有毅力，陷入「立志、挫折、放棄」的循環中。" },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -240,11 +243,11 @@ export default function App() {
             <span className="text-[0.8rem] uppercase tracking-widest text-brown-text/50 mb-8 block font-medium">加入課程前</span>
             <ul className="space-y-5">
               {[
-                "資料夾裡躺著幾個沒用完的模板",
-                "打開版面就覺得哪裡不對，懶得寫",
-                "覺得「是我自己沒毅力」",
-                "又去買下一個模板，循環重來",
-                "不知道怎麼設計想要的頁面",
+                "腦中想法很多，卻總是卡在原地沒有開始",
+                "對未來有憧憬，卻少了一套能持續落地的日常系統",
+                "買過手帳或設定目標，最後都安靜躺在資料夾裡",
+                "卡關時總是自責，以為是自己不夠自律和堅持",
+                "過著隨波逐流的日子，感覺對生活失去了掌控感",
               ].map((text, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-brown-text/70">
                   <XCircle className="w-5 h-5 text-brown-text/30 shrink-0 mt-0.5" />
@@ -265,11 +268,11 @@ export default function App() {
             <span className="text-[0.8rem] uppercase tracking-widest text-terracotta mb-8 block font-bold">完成課程後</span>
             <ul className="space-y-5">
               {[
-                "一本從封面到跳轉都是自己做的電子手帳",
-                "每天主動想打開，因為每一頁都是為自己設計的",
-                "知道自己需要什麼版面，怎麼規劃才適合自己",
-                "不再花錢買不合適的模板",
-                "可以自己設計，甚至販售給別人",
+                "用五大方向清晰盤點現況，釐清 2027 願景",
+                "擁有一套為自己量身打造、天天想打開的人生手帳",
+                "學會設計不同版本的未來，找出阻礙前進的卡點",
+                "校準顯化頻率，用最適合自己的節奏輕盈前進",
+                "拿回生活掌控權，每天都能看見自己前進的軌跡",
               ].map((text, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-brown-dark font-medium">
                   <Star className="w-5 h-5 text-terracotta shrink-0 fill-terracotta mt-0.5" />
@@ -284,36 +287,74 @@ export default function App() {
       {/* Pivot Statement */}
       <section className="bg-brown-dark px-6 py-24 text-center">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[1.8rem] md:text-3xl text-cream leading-relaxed font-serif">
-            來設計一個屬於自己的電子手帳<br />用你習慣、喜歡的方式來記錄
+          <h2 className="text-[1.8rem] md:text-3xl text-cream leading-relaxed font-serif font-bold">
+            重新設計你的 2027<br />讓手帳成為接住你夢想的溫暖容器
           </h2>
         </div>
       </section>
 
       {/* Course Intro + Benefits */}
       <section className="bg-cream px-6 py-20">
-        <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[1.8rem] text-brown-dark text-center mb-6">這堂課帶你做什麼？</h2>
-          <p className="text-center text-brown-text mb-16 max-w-2xl mx-auto leading-relaxed">
-            這是一堂從規劃到完成的陪跑課。不只教你怎麼用 Canva，而是帶你做出一本你真的會用的電子手帳——從架構設計、版面美化，到跳轉功能，4 週全包。<br className="hidden md:block" />
-            <span className="text-terracotta font-bold mt-2 inline-block">「這不只是教你用 Canva 做手帳，這是一堂陪你重新設計人生的課。」</span>
-          </p>
+        <div className="max-w-[1100px] mx-auto text-center">
+          <h2 className="text-[1.8rem] md:text-3xl text-brown-dark mb-10 font-bold leading-tight">
+            這不是一堂教你做手帳的課
+          </h2>
+          <div className="text-brown-text max-w-3xl mx-auto text-base md:text-lg leading-loose space-y-6">
+            <p className="font-semibold text-xl text-terracotta">這是一堂帶你重新設計 2027 人生的課。</p>
+            <p>
+              這套課程的設計，靈感來自史丹佛大學廣受歡迎的「設計你的人生」概念，我把它轉化成更貼近你、更日常的方式。
+            </p>
+            <p>
+              先把你的人生想清楚，再用 Canva 做成一本你天天想打開的人生手帳。
+            </p>
+            <p className="font-semibold text-brown-dark">
+              手帳不是目的，是讓你的設計每天看得見、撐住你一整年的容器。
+            </p>
+          </div>
         </div>
       </section>
+
 
       {/* Curriculum Timeline */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[1.8rem] text-brown-dark text-center mb-16 font-bold">4 週，帶你從零完成一本手帳</h2>
+          <h2 className="text-[2rem] md:text-3xl text-brown-dark text-center mb-6 font-bold leading-tight">6 場直播・重新設計 2027 人生</h2>
+          <p className="text-center text-brown-text/70 mb-12 max-w-2xl mx-auto text-base">
+            這是一段有流程感的旅程：先盤點，再一層一層往上設計。
+          </p>
+
+          {/* Course Schedule Information Card */}
+          <div className="max-w-2xl mx-auto bg-white border border-beige-light p-8 rounded-2xl mb-16 text-center shadow-sm">
+            <span className="text-terracotta font-bold text-lg block mb-4">🗓️ 課程時間資訊</span>
+            <p className="text-brown-dark font-medium mb-6">6 場直播・線上進行，皆有錄影回放</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-sm text-brown-text">
+              <div className="p-3 bg-cream/50 rounded-lg">
+                <span className="font-bold text-brown-dark block">⏳ 報名截止</span>
+                8/30（日）
+              </div>
+              <div className="p-3 bg-cream/50 rounded-lg">
+                <span className="font-bold text-brown-dark block">🤝 開幕式</span>
+                8/31（一）
+              </div>
+              <div className="p-3 bg-cream/50 rounded-lg">
+                <span className="font-bold text-brown-dark block">💻 四週正課</span>
+                9/3、9/10、9/17、9/24（每週四晚上 8 點）
+              </div>
+              <div className="p-3 bg-cream/50 rounded-lg">
+                <span className="font-bold text-brown-dark block">🎓 結業式</span>
+                9/28（一）成果發表會
+              </div>
+            </div>
+          </div>
           
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
-              { week: "WEEK 0", title: "開幕式 | 覺察你現在的生活", icon: "🤝", desc: "了解課程節奏、課程平台使用、Canva簡單介紹，準備好開始" },
-              { week: "WEEK 1", title: "認識你的需求 + 規劃手帳架構", icon: "🗺️", desc: "搞清楚自己需要什麼版面，畫出你的手帳目錄草稿" },
-              { week: "WEEK 2", title: "打造手帳骨架", icon: "🏗️", desc: "封面、目錄、月計劃頁、分頁按鈕、電子貼紙製作" },
-              { week: "WEEK 3", title: "AI × Canva｜設計專屬你的頁面與素材", icon: "🎨", desc: "從顯化日記、情緒追蹤、反思回顧、記帳頁……用AI輔助，做出你想要的手帳主題" },
-              { week: "WEEK 4", title: "跳轉 × 整合｜完成你的專屬手帳", icon: "🎓", desc: "製作跳轉功能，整合所有頁面、統一風格，完成屬於你的電子手帳。" },
-              { week: "WEEK 5", title: "成為自己的人生設計師", icon: "🌟", desc: "結業式與成果發表，和大家分享重新設計人生的過程、心得與學員反饋。" },
+              { week: "開幕式 ｜ 8/31 (一)", title: "盤點：看見你現在的人生", icon: "🤝", desc: "先別急著規劃未來，先誠實看一次你的現在。用人生五大方向做一次完整盤點：健康、工作、玩樂、愛、顯化。" },
+              { week: "第二季 第一週 ｜ 9/3 (四)", title: "定向：把現況設計成 2027 的願景", icon: "🗺️", desc: "盤點完，下一步是定向。把「我現在卡在這裡」變成「我 2027 想活成的樣子」。" },
+              { week: "第二季 第二週 ｜ 9/10 (四)", title: "選路：設計三個版本的未來", icon: "🛣️", desc: "人生從來不是只有一條正確的路。那個拖最久的目標，我們一起找出「真正卡住你的，從來不是時間」。" },
+              { week: "第二季 第三週 ｜ 9/17 (四)", title: "轉念：校準你的顯化頻率", icon: "✨", desc: "同樣的目標，為什麼有些人輕鬆顯化，你卻一直很費力？" },
+              { week: "第二季 第四週 ｜ 9/24 (四)", title: "實驗：設計讓改變持續的系統", icon: "🧪", desc: "大部分人不是輸在沒目標，是輸在撐不久。這週結束，你會有一本從封面到內頁、完整屬於你的 2027 人生手帳。" },
+              { week: "結業式 ｜ 9/28 (一)", title: "發表：2027 你的人生設計成果發表", icon: "🌟", desc: "大家一起站上舞台的發表會。對著所有人，說出一句「2027 我要成為的樣子」。" },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -331,14 +372,16 @@ export default function App() {
                 <div className="bg-white p-6 rounded-lg shadow-sm border border-beige-light border-l-4 border-l-terracotta flex-grow">
                   <span className="text-[0.7rem] font-bold text-terracotta uppercase tracking-[0.2em] mb-1 block">{item.week}</span>
                   <h3 className="text-[1.1rem] font-bold text-brown-dark mb-2">{item.title}</h3>
-                  <p className="text-[0.9rem] text-brown-text/80">{item.desc}</p>
+                  <p className="text-[0.9rem] text-brown-text/80 leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Magazine Mockup Showcase */}
-          <div className="mt-24 mb-10 overflow-visible px-4">
+          {/* Student Showcase Gallery Section */}
+          <div className="mt-28 mb-10 overflow-visible px-4 text-center">
+            <h3 className="text-2xl md:text-3xl text-brown-dark font-bold mb-3">他們，設計出了自己的人生手帳</h3>
+            <p className="text-brown-text/70 text-base mb-12">每一本，都是一個人重新設計後的一年。</p>
             <div className="flex justify-center items-center flex-wrap lg:flex-nowrap pt-12">
               {[
                 { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/2.jpg", rotate: -5, y: 15 },
@@ -367,7 +410,7 @@ export default function App() {
               ))}
             </div>
             <p className="text-center text-brown-text/40 text-sm mt-20 italic tracking-widest font-serif">
-              可以做出這樣的模板
+              學員真實手帳作品與設計模板
             </p>
           </div>
         </div>
