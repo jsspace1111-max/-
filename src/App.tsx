@@ -308,12 +308,11 @@ export default function App() {
               先把你的人生想清楚，再用 Canva 做成一本你天天想打開的人生手帳。
             </p>
             <p className="font-semibold text-brown-dark">
-              手帳不是目的，是讓你的設計每天看得見、撐住你一整年的容器。
+              手帳不是目的，是讓你的設計持續落地的媒介。
             </p>
           </div>
         </div>
       </section>
-
 
       {/* Curriculum Timeline */}
       <section className="bg-cream px-6 py-20">
@@ -342,7 +341,7 @@ export default function App() {
               </div>
               <div className="p-3 bg-cream/50 rounded-lg">
                 <span className="font-bold text-brown-dark block">🎓 結業式</span>
-                9/28（一）成果發表會
+                9/30（三）成果發表會
               </div>
             </div>
           </div>
@@ -354,7 +353,7 @@ export default function App() {
               { week: "第二季 第二週 ｜ 9/10 (四)", title: "選路：設計三個版本的未來", icon: "🛣️", desc: "人生從來不是只有一條正確的路。那個拖最久的目標，我們一起找出「真正卡住你的，從來不是時間」。" },
               { week: "第二季 第三週 ｜ 9/17 (四)", title: "轉念：校準你的顯化頻率", icon: "✨", desc: "同樣的目標，為什麼有些人輕鬆顯化，你卻一直很費力？" },
               { week: "第二季 第四週 ｜ 9/24 (四)", title: "實驗：設計讓改變持續的系統", icon: "🧪", desc: "大部分人不是輸在沒目標，是輸在撐不久。這週結束，你會有一本從封面到內頁、完整屬於你的 2027 人生手帳。" },
-              { week: "結業式 ｜ 9/28 (一)", title: "發表：2027 你的人生設計成果發表", icon: "🌟", desc: "大家一起站上舞台的發表會。對著所有人，說出一句「2027 我要成為的樣子」。" },
+              { week: "結業式 ｜ 9/30 (三)", title: "發表：2027 你的人生設計成果發表", icon: "🌟", desc: "大家一起站上舞台的發表會。對著所有人，說出一句「2027 我要成為的樣子」。" },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -612,18 +611,19 @@ export default function App() {
       {/* Who Is This For */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[2.2rem] text-brown-dark text-center mb-2 font-bold">這堂課是為你設計的</h2>
+          <h2 className="text-[2.2rem] text-brown-dark text-center mb-2 font-bold leading-tight">這堂課，是為現在的你設計的</h2>
           <span className="text-[0.8rem] text-brown-text/50 text-center block mb-16 px-4">如果你有這些感受 ↓</span>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {[
-              "買過電子手帳，但用沒多久就放棄了",
-              "買了很多模板，卻找不到真正適合自己的樣式",
-              "想做自己的手帳，但不知道從哪裡開始",
-              "用過 Canva，但做不出自己想要的效果",
-              "完全沒用過 Canva，擔心自己學不會",
-              "想要一本可以規劃生活、也可以記錄心情的手帳",
-              "想用手帳書寫顯化、設定人生意圖",
+              "腦子裡想了好多，卻遲遲沒有真的開始",
+              "每年都立目標，過沒多久又默默回到原樣",
+              "買過手帳、上過課，最後都躺在資料夾裡用不下去",
+              "明明已經很努力，卻總覺得在內耗、在空轉",
+              "正站在人生的某個轉彎處，想重新想清楚自己要什麼",
+              "想要一本能陪你走一整年的手帳，不是又一個三分鐘熱度",
+              "想用書寫顯化，把想要的人生真的活出來",
+              "沒用過 Canva 也沒關係，我會一步一步帶你做",
             ].map((text, idx) => (
               <motion.div 
                 key={idx}
@@ -765,10 +765,10 @@ export default function App() {
           <div className="max-w-[600px] mx-auto bg-white rounded-3xl shadow-2xl border-l-[12px] border-l-terracotta overflow-hidden text-left transform hover:scale-[1.02] transition-all duration-300">
             <div className="p-10 border-b border-beige-light flex justify-between items-center bg-beige-light/30">
               <div>
-                <span className="text-[1.05rem] md:text-[1.1rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 J.S. Space 創作者計畫</span>
+                <span className="text-[1.05rem] md:text-[1.1rem] uppercase tracking-widest text-terracotta font-bold block mb-1">📦 手帳變現創作者計畫</span>
                 <span className="text-sm text-brown-text/60">加購優惠</span>
                 <span className="text-xs text-brown-text/40 block line-through mt-1">原價 NT$3,680</span>
-                <span className="text-xs text-brown-dark/80 block mt-2 font-semibold">課程預計開課日期 (10月中) ｜ 共2場線上直播</span>
+                <span className="text-xs text-brown-dark/80 block mt-2 font-semibold">課程預計開課日期是 10 月 6 、7 ｜ 共2場線上直播</span>
               </div>
               <div className="text-terracotta font-serif text-3xl font-bold italic">NT$2,080</div>
             </div>
@@ -778,7 +778,7 @@ export default function App() {
                 { icon: "🛒", text: "上架平台選擇" },
                 { icon: "🖼️", text: "數位產品上架圖製作" },
                 { icon: "📣", text: "協助J.S. Space平台上架與社群曝光" },
-                { icon: "🗓️", text: "一對一30分鐘上架健檢 - 數位產品銷售策略、品牌經營" },
+                { icon: "🗓️", text: "一對一30分鐘上架健檢 - 銷售策略、品牌經營" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 text-brown-dark text-lg font-medium">
                   <span className="p-2 bg-beige-light rounded-lg">{item.icon}</span>
@@ -788,7 +788,7 @@ export default function App() {
             </div>
             <div className="p-10 pt-0">
               <button className="w-full bg-terracotta text-white font-bold py-5 rounded-2xl hover:bg-terracotta-hover transition-all text-xl shadow-xl shadow-terracotta/30">
-                加購 J.S. Space 創作者計畫 →
+                加購手帳變現創作者計畫 →
               </button>
             </div>
           </div>
