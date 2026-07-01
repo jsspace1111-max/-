@@ -201,10 +201,10 @@ export default function App() {
             明明很想把日子過好，卻總是卡在同一個地方。<br /><br />
             腦子裡有一百個想法，卻一個都沒真的開始。<br /><br />
             好不容易下定決心，過幾天又回到原樣。<br /><br />
-            買過手帳、上過課、立過目標，最後都安靜地躺在某個資料夾裡。<br /><br />
+            買過手帳、上過課、立過目標，最後都還是沒有辦法持續下去...<br /><br />
             然後你告訴自己：是不是我不夠自律、不夠堅持？<br /><br />
-            但其實不是。<br /><br />
-            你缺 of 意志力，是一套真正為你設計、能陪你走一整年的系統。
+            但其實不是你缺乏意志力<br /><br />
+            而是一套真正為你設計、能陪你走一整年的系統。
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -288,7 +288,7 @@ export default function App() {
       <section className="bg-brown-dark px-6 py-24 text-center">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-[1.8rem] md:text-3xl text-cream leading-relaxed font-serif font-bold">
-            重新設計你的 2027<br />讓手帳成為接住你夢想的溫暖容器
+            重新設計你的 2027<br />讓手帳成為支持你夢想的系統
           </h2>
         </div>
       </section>
@@ -297,15 +297,15 @@ export default function App() {
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto text-center">
           <h2 className="text-[1.8rem] md:text-3xl text-brown-dark mb-10 font-bold leading-tight">
-            這不是一堂教你做手帳的課
+            這不只是一堂教你做手帳的課
           </h2>
           <div className="text-brown-text max-w-3xl mx-auto text-base md:text-lg leading-loose space-y-6">
             <p className="font-semibold text-xl text-terracotta">這是一堂帶你重新設計 2027 人生的課。</p>
             <p>
-              這套課程的設計，靈感來自史丹佛大學廣受歡迎的「設計你的人生」概念，我把它轉化成更貼近你、更日常的方式。
+              這套課程的設計，靈感來自史丹佛大學廣受歡迎的「設計你的人生」概念，變成更貼近你、更日常的方式。
             </p>
             <p>
-              先把你的人生想清楚，再用 Canva 做成一本你天天想打開的人生手帳。
+              先把你的人生想清楚，再做成一本你天天想打開持續使用的人生手帳。
             </p>
             <p className="font-semibold text-brown-dark">
               手帳不是目的，是讓你的設計持續落地的媒介。
@@ -319,7 +319,7 @@ export default function App() {
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-[2rem] md:text-3xl text-brown-dark text-center mb-6 font-bold leading-tight">6 場直播・重新設計 2027 人生</h2>
           <p className="text-center text-brown-text/70 mb-12 max-w-2xl mx-auto text-base">
-            這是一段有流程感的旅程：先盤點，再一層一層往上設計。
+            一起盤點你現在的生活，陪你一起重新設計你未來的夢想生活
           </p>
 
           {/* Course Schedule Information Card */}
