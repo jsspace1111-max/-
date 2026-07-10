@@ -163,7 +163,7 @@ export default function App() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-terracotta max-w-3xl mx-auto mb-10 leading-relaxed font-bold tracking-wider"
           >
-            用五大方向重新設計你的 2027
+            健康 X 工作 X 玩樂 X 愛 X 顯化，重新設計你的 2027
           </motion.p>
           <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
             第二季開課時間 : 2026.9.3 - 9.24
@@ -474,7 +474,7 @@ export default function App() {
             whileInView={{ opacity: 1 }}
             className="text-lg md:text-xl text-brown-dark font-bold mt-10 tracking-wide bg-terracotta/10 inline-block px-8 py-3 rounded-full border border-terracotta/20"
           >
-            申請期限：課程結束後 4 週內（至 2026/10/22）
+            申請期限：課程結束後三週內（至 2026/10/21）
           </motion.p>
         </div>
       </section>
@@ -831,7 +831,7 @@ export default function App() {
             />
             <FAQItem 
               question="Q：返現怎麼申請？" 
-              answer="完課並填寫返現挑戰申請表，在課程結束後 4 週內（2026/10/22 前）填寫申請表單。" 
+              answer="完課並填寫返現挑戰申請表，在課程結束後三週內（2026/10/21 前）填寫申請表單。" 
             />
             <FAQItem 
               question="Q：付款後如何加入課程？" 
