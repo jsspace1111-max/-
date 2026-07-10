@@ -490,7 +490,7 @@ export default function App() {
               { icon: <Star className="w-6 h-6" />, title: "為2027重新設計人生", desc: "重新設計人生、對生活更有掌控感" },
               { icon: <Video className="w-6 h-6" />, title: "4 週直播陪跑課", desc: "每週四晚上 8 點，有人帶著你一步一步做" },
               { icon: <Clock className="w-6 h-6" />, title: "錄影回放一年", desc: "沒跟上直播？一年內隨時補看" },
-              { icon: <Users className="w-6 h-6" />, title: "Skool /LINE 學習群組一年", desc: "和同期學員互相支持，Jessica 在線回覆" },
+              { icon: <Users className="w-6 h-6" />, title: "設計團隊共創社群", desc: "Skool + LINE社群一年" },
               { icon: <PenTool className="w-6 h-6" />, title: "每週作業 + Jessica 回饋", desc: "不是自己做完就算，有人幫你看、給你建議" },
               { icon: <Layout className="w-6 h-6" />, title: "一本屬於你的電子手帳", desc: "從封面到跳轉，每一頁都是為你設計的" },
             ].map((item, idx) => (
