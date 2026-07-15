@@ -155,7 +155,7 @@ export default function App() {
             transition={{ delay: 0.1 }}
             className="text-[2.5rem] md:text-[3.8rem] text-brown-dark leading-tight mb-8 font-bold"
           >
-            2027 重新設計人生<br className="hidden md:block" />人生手帳陪跑返現計劃
+            2027 重新設計人生<br className="hidden md:block" />手帳陪跑返現計劃
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 10 }}
@@ -163,7 +163,7 @@ export default function App() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-2xl text-terracotta max-w-3xl mx-auto mb-10 leading-relaxed font-bold tracking-wider"
           >
-            健康 X 工作 X 玩樂 X 愛 X 顯化，重新設計你的 2027
+            健康 X 工作 X 玩樂 X 愛 X 顯化，人生設計團隊
           </motion.p>
           <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
             第二季開課時間 : 2026.9.1 - 9.22
@@ -196,15 +196,11 @@ export default function App() {
       {/* Pain Points */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[1.8rem] text-brown-dark text-center mb-10">你有沒有發現⋯</h2>
-          <p className="text-center text-brown-text mb-16 max-w-3xl mx-auto leading-relaxed">
-            明明很想把日子過好，卻總是卡在同一個地方。<br /><br />
-            腦子裡有一百個想法，卻一個都沒真的開始。<br /><br />
-            好不容易下定決心，過幾天又回到原樣。<br /><br />
-            買過手帳、上過課、立過目標，最後都還是沒有辦法持續下去...<br /><br />
-            然後你告訴自己：是不是我不夠自律、不夠堅持？<br /><br />
-            但其實不是你缺乏意志力<br /><br />
-            而是一套真正為你設計、能陪你走一整年的系統。
+          <h2 className="text-[1.8rem] md:text-3xl text-brown-dark text-center mb-6 font-bold leading-relaxed">
+            你已經下定決心，不要再過這種「差不多」的人生。
+          </h2>
+          <p className="text-center text-brown-text/90 mb-16 max-w-3xl mx-auto leading-relaxed text-lg md:text-xl font-medium">
+            你有認真想過，你想要過什麼樣的人生嗎？
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -300,15 +296,21 @@ export default function App() {
             這不只是一堂教你做手帳的課
           </h2>
           <div className="text-brown-text max-w-3xl mx-auto text-base md:text-lg leading-loose space-y-6">
-            <p className="font-semibold text-xl text-terracotta">這是一堂帶你重新設計 2027 人生的課。</p>
+            <p className="font-semibold text-xl text-terracotta">這是和你一起重新設計 2027 人生的活動</p>
             <p>
               這套課程的設計，靈感來自史丹佛大學廣受歡迎的「設計你的人生」概念，變成更貼近你、更日常的方式。
             </p>
-            <p>
-              先把你的人生想清楚，再做成一本你天天想打開持續使用的人生手帳。
-            </p>
-            <p className="font-semibold text-brown-dark">
-              手帳不是目的，是讓你的設計持續落地的媒介。
+            <div className="py-6 border-y border-beige-dark/30 my-8 space-y-4">
+              <p className="font-bold text-brown-dark text-xl tracking-wider">《Designing Your Life》</p>
+              <p className="text-brown-text/90 leading-relaxed font-medium">
+                畫家可以一個人創作出曠世巨作，<br />
+                但 iPhone 卻沒辦法只靠一個設計師就設計出來。
+              </p>
+            </div>
+            <p className="font-medium text-brown-dark text-lg">
+              我相信，每個人的人生都是一項非凡的設計。<br />
+              而這種設計，你不需要一個人想破頭。<br />
+              我們可以靠一個團隊，結合彼此的點子，一起完成你的人生手帳。
             </p>
           </div>
         </div>
