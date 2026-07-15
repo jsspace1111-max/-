@@ -190,7 +190,7 @@ export default function App() {
 
       {/* Early Bird Banner */}
       <div className="bg-terracotta text-white py-5 px-6 text-center text-base md:text-lg font-bold tracking-wider">
-        🗓 超早鳥優惠 NT$2,880，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/17 起原價 NT$4,080
+        🗓 超早鳥優惠 NT$2,880，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/24 起原價 NT$4,080
       </div>
 
       {/* Pain Points */}
