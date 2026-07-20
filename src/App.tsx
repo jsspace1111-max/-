@@ -350,12 +350,12 @@ export default function App() {
           
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
-              { week: "開幕式 ｜ 8/31 (一)", title: "盤點：看見你現在的人生", icon: "🤝", desc: "先別急著規劃未來，先誠實看一次你的現在。用人生五大方向做一次完整盤點：健康、工作、玩樂、愛、顯化。" },
+              { week: "開幕式 ｜ 8/31 (一)", title: "盤點：看見你現在的人生", icon: "🤝", desc: "先別急著規劃未來，停下來你的現在。用人生四大方向做一次完整盤點：健康、工作、玩樂、愛" },
               { week: "第二季 第一週 ｜ 9/1 (二)", title: "看見全貌・2027 重新設計顯化人生版本", icon: "🗺️", desc: "盤點完，下一步是看見全貌。重新定位，把「我現在卡在這裡」變成「我 2027 想活成的樣子」。" },
               { week: "第二季 第二週 ｜ 9/8 (二)", title: "三個版本的未來・把願景變路線", icon: "🛣️", desc: "人生從來不是只有一條正確的路。那個拖最久的目標，我們一起設計三個版本的未來，把願景化為清晰的具體路線。" },
               { week: "第二季 第三週 ｜ 9/15 (二)", title: "重新框架・金錢與顯化頻率", icon: "✨", desc: "同樣的目標，為什麼有些人輕鬆顯化，你卻一直很費力？這週我們將重新框架，校準你與金錢、資源的顯化頻率。" },
-              { week: "第二季 第四週 ｜ 9/22 (二)", title: "原型實驗・讓改變持續", icon: "🧪", desc: "做一套屬於你的人生手帳系統。大部分人不是輸在沒目標，是輸在撐不久。透過原型實驗，讓設計真正落地生根。" },
-              { week: "結業式 ｜ 9/29 (二)", title: "發表：2027 你的人生設計成果發表", icon: "🌟", desc: "大家一起站上舞台的發表會。對著所有人，說出一句「2027 我要成為的樣子」。" },
+              { week: "第二季 第四週 ｜ 9/22 (二)", title: "原型實驗・讓改變持續", icon: "🧪", desc: "做一套屬於你的人生手帳系統。設計一個小到不會怕、成本低到隨時能試的實驗，透過原型實驗，讓改變真正落地。" },
+              { week: "結業式 ｜ 9/29 (二)", title: "發表：2027 你的人生設計成果發表", icon: "🌟", desc: "在安全溫暖的空間，把你的願望目標勇敢說出來。讓大家一起幫你聚焦、顯化出美好的2027" },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -613,40 +613,44 @@ export default function App() {
         <div className="max-w-[1100px] mx-auto">
           <div className="text-center mb-16">
             <span className="text-[0.9rem] uppercase tracking-widest text-brown-text/50 mb-4 block font-medium">關於你的手帳陪跑教練</span>
-            <h2 className="text-[2.2rem] text-brown-dark font-bold">首席設計師 Jessica</h2>
+            <h2 className="text-[2.2rem] text-brown-dark font-bold">Jessica</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Story column */}
             <div className="lg:col-span-7 space-y-6 text-base md:text-lg text-brown-text leading-relaxed text-left">
               <p className="font-bold text-xl text-brown-dark italic decoration-terracotta underline decoration-2 underline-offset-8">
-                嗨，我是 Jessica 👋 J.S. Space 的創辦人，經營手帳品牌邁入第 3 年
+                J.S. Space 的創辦人，經營手帳品牌邁入第 3 年
               </p>
               <p>
-                我了解「買了一堆手帳，卻沒一本用得下去」的那種挫折，以為是自己不夠自律。
+                我買過一堆手帳，卻沒有一本真的用得下去。
+              </p>
+              <p>
+                有很長一段時間，我以為是自己不夠自律。
               </p>
               <p>
                 直到我開始動手「自己設計」，才第一次擁有一本真正屬於我的人生手帳。
               </p>
               <p>
-                手帳只是一個設計人生的工具，<span className="font-semibold text-terracotta text-lg decoration-wavy underline">你想活成什麼樣子，才是。</span>
+                後來我才懂，手帳從來都只是一個設計人生的工具。<span className="font-semibold text-terracotta text-lg decoration-wavy underline">你想活成什麼樣子，才是真正的重點。</span>
               </p>
               <p>
-                今天發現更喜歡的，其實是<strong className="text-terracotta">「陪伴」</strong>。
+                而做著做著，我發現自己更喜歡的，其實是<strong className="text-terracotta">「陪伴」</strong>這件事。
               </p>
               <p className="pl-4 border-l-2 border-beige-dark/30 py-1 space-y-2 text-[0.95rem] text-brown-text/90">
-                陪伴學員從三分鐘熱度，到真的養成一個習慣；<br />
-                陪伴他們把想做卻一直沒做的事，一件一件打勾；也<br />
-                看著原本各自孤軍奮戰的人，慢慢變成彼此的隊友。
+                陪伴學員從三分鐘熱度，到真的養成一個習慣。<br />
+                陪伴他們把想做卻一直沒做的事，一件一件打勾。<br />
+                也看著原本各自孤軍奮戰的人，慢慢變成彼此的隊友。
               </p>
               <p className="text-brown-dark font-medium border-l-4 border-terracotta pl-6 py-4 bg-white/50 rounded-r-xl">
-                因為真正的改變，從來不是靠意志力撐出來的，而是有人陪伴、有一群人和你溫暖的一起前進
+                因為真正的改變，從來不是靠意志力硬撐出來的。<br />
+                更多時候，是因為有人陪伴、有一群人願意跟你一起慢慢走。
               </p>
               <p className="text-brown-dark font-medium">
-                這裡會是一個讓內向者可以安心發光的地方。
+                我想讓這裡，成為一個內向的人也可以安心發光的地方。
               </p>
               <p className="font-bold text-terracotta text-lg pt-2">
-                不需要勉強自己，在我們的社群裡，你可以用最舒適自在的節奏，溫柔而堅定地展現自己的力量。
+                你不需要勉強自己。在這裡，你可以用最舒適自在的節奏，溫柔而堅定地，把屬於你的力量長出來。
               </p>
             </div>
 
