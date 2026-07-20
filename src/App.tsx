@@ -351,10 +351,10 @@ export default function App() {
           <div className="space-y-8 max-w-3xl mx-auto">
             {[
               { week: "開幕式 ｜ 8/31 (一)", title: "盤點：看見你現在的人生", icon: "🤝", desc: "先別急著規劃未來，先誠實看一次你的現在。用人生五大方向做一次完整盤點：健康、工作、玩樂、愛、顯化。" },
-              { week: "第二季 第一週 ｜ 9/1 (二)", title: "定向：把現況設計成 2027 的願景", icon: "🗺️", desc: "盤點完，下一步是定向。把「我現在卡在這裡」變成「我 2027 想活成的樣子」。" },
-              { week: "第二季 第二週 ｜ 9/8 (二)", title: "選路：設計三個版本的未來", icon: "🛣️", desc: "人生從來不是只有一條正確的路。那個拖最久的目標，我們一起找出「真正卡住你的，從來不是時間」。" },
-              { week: "第二季 第三週 ｜ 9/15 (二)", title: "轉念：校準你的顯化頻率", icon: "✨", desc: "同樣的目標，為什麼有些人輕鬆顯化，你卻一直很費力？" },
-              { week: "第二季 第四週 ｜ 9/22 (二)", title: "實驗：設計讓改變持續的系統", icon: "🧪", desc: "大部分人不是輸在沒目標，是輸在撐不久。這週結束，你會有一本從封面到內頁、完整屬於你的 2027 人生手帳。" },
+              { week: "第二季 第一週 ｜ 9/1 (二)", title: "看見全貌・2027 重新設計顯化人生版本", icon: "🗺️", desc: "盤點完，下一步是看見全貌。重新定位，把「我現在卡在這裡」變成「我 2027 想活成的樣子」。" },
+              { week: "第二季 第二週 ｜ 9/8 (二)", title: "三個版本的未來・把願景變路線", icon: "🛣️", desc: "人生從來不是只有一條正確的路。那個拖最久的目標，我們一起設計三個版本的未來，把願景化為清晰的具體路線。" },
+              { week: "第二季 第三週 ｜ 9/15 (二)", title: "重新框架・金錢與顯化頻率", icon: "✨", desc: "同樣的目標，為什麼有些人輕鬆顯化，你卻一直很費力？這週我們將重新框架，校準你與金錢、資源的顯化頻率。" },
+              { week: "第二季 第四週 ｜ 9/22 (二)", title: "原型實驗・讓改變持續", icon: "🧪", desc: "做一套屬於你的人生手帳系統。大部分人不是輸在沒目標，是輸在撐不久。透過原型實驗，讓設計真正落地生根。" },
               { week: "結業式 ｜ 9/29 (二)", title: "發表：2027 你的人生設計成果發表", icon: "🌟", desc: "大家一起站上舞台的發表會。對著所有人，說出一句「2027 我要成為的樣子」。" },
             ].map((item, idx) => (
               <motion.div 
@@ -377,42 +377,6 @@ export default function App() {
                 </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Student Showcase Gallery Section */}
-          <div className="mt-28 mb-10 overflow-visible px-4 text-center">
-            <h3 className="text-2xl md:text-3xl text-brown-dark font-bold mb-3">他們，設計出了自己的人生手帳</h3>
-            <p className="text-brown-text/70 text-base mb-12">每一本，都是一個人重新設計後的一年。</p>
-            <div className="flex justify-center items-center flex-wrap lg:flex-nowrap pt-12">
-              {[
-                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/2.jpg", rotate: -5, y: 15 },
-                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/12.png", rotate: 3, y: -10 },
-                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/IMG_4625.PNG", rotate: -2, y: 20 },
-                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/4%20(2).png", rotate: 4, y: 0 },
-                { src: "https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/模板.jpg", rotate: -3, y: 10 }
-              ].map((img, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 40, rotate: img.rotate * 2 }}
-                  whileInView={{ opacity: 1, y: img.y, rotate: img.rotate }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1, duration: 0.8, ease: "easeOut" }}
-                  className={`relative shrink-0 ${idx === 0 || idx === 4 ? 'w-36 sm:w-48 md:w-52 lg:w-60' : 'w-44 sm:w-56 md:w-64 lg:w-72'} -ml-12 sm:-ml-16 first:ml-0 hover:z-20 transition-all cursor-pointer group`}
-                  whileHover={{ scale: 1.05, rotate: 0 }}
-                >
-                  <div className="absolute inset-0 bg-black/5 rounded-lg blur-xl translate-y-4 group-hover:opacity-0 transition-opacity"></div>
-                  <img 
-                    src={img.src} 
-                    alt={`Showcase ${idx + 1}`} 
-                    className="w-full h-auto rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-white/50 relative z-10"
-                    referrerPolicy="no-referrer"
-                  />
-                </motion.div>
-              ))}
-            </div>
-            <p className="text-center text-brown-text/40 text-sm mt-20 italic tracking-widest font-serif">
-              學員真實手帳作品與設計模板
-            </p>
           </div>
         </div>
       </section>
@@ -548,7 +512,7 @@ export default function App() {
                 text: (
                   <>
                     <span className="text-terracotta font-bold">最讓我驚喜的是跳轉功能</span>。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我{" "}
-                    <span className="text-terracotta font-bold">學會了製作可跳轉的目錄和導航列——這對懶人來說簡直是福音！</span>
+                    <span className="text-terracotta font-bold">學會了製作可跳轉的目錄 and 導航列——這對懶人來說簡集是福音！</span>
                   </>
                 ),
                 author: "C 小姐"
@@ -646,26 +610,104 @@ export default function App() {
 
       {/* About Jessica */}
       <section className="bg-beige-light px-6 py-24">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <span className="text-[0.9rem] uppercase tracking-widest text-brown-text/50 mb-4 block font-medium">關於你的手帳陪跑教練</span>
-          <div className="space-y-6 text-lg text-brown-text leading-relaxed max-w-2xl mx-auto">
-            <p className="font-bold text-xl text-brown-dark italic decoration-terracotta underline decoration-2 underline-offset-8">嗨，我是 Jessica 👋</p>
-            <p>我是 J.S. Space 的創辦人，經營電子手帳品牌 3 年。</p>
-            <p>這 3 年，我設計手帳超過 200 小時、分享至少 30 種模板、累積了 3000 頁的排版經驗——然後把這些全部整理成這堂 4 週陪跑課。</p>
-            <p>我自己也走過「買了一堆手帳，沒一本用得下去」階段。直到開始自己設計，才真的找到一本屬於我的手帳。</p>
-            <p className="text-brown-dark font-medium border-l-4 border-terracotta pl-6 py-4 bg-white/50 rounded-r-xl text-left">這堂課不是讓你看完影片自己摸索——而是一週一週，有人帶著你做完。</p>
+        <div className="max-w-[1100px] mx-auto">
+          <div className="text-center mb-16">
+            <span className="text-[0.9rem] uppercase tracking-widest text-brown-text/50 mb-4 block font-medium">關於你的手帳陪跑教練</span>
+            <h2 className="text-[2.2rem] text-brown-dark font-bold">首席設計師 Jessica</h2>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 pt-10 justify-center">
-            {[
-              "📒 200+ 小時設計手帳",
-              "📐 30+ 種模板分享",
-              "📄 3,000+ 頁排版經驗",
-            ].map((stat, idx) => (
-              <div key={idx} className="bg-white/80 px-6 py-3 rounded-xl text-sm font-bold text-brown-dark border border-beige-dark/30 shadow-sm">
-                {stat}
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Story column */}
+            <div className="lg:col-span-7 space-y-6 text-base md:text-lg text-brown-text leading-relaxed text-left">
+              <p className="font-bold text-xl text-brown-dark italic decoration-terracotta underline decoration-2 underline-offset-8">
+                嗨，我是 Jessica 👋 J.S. Space 的創辦人，經營手帳品牌邁入第 3 年
+              </p>
+              <p>
+                我了解「買了一堆手帳，卻沒一本用得下去」的那種挫折，以為是自己不夠自律。
+              </p>
+              <p>
+                直到我開始動手「自己設計」，才第一次擁有一本真正屬於我的人生手帳。
+              </p>
+              <p>
+                手帳只是一個設計人生的工具，<span className="font-semibold text-terracotta text-lg decoration-wavy underline">你想活成什麼樣子，才是。</span>
+              </p>
+              <p>
+                今天發現更喜歡的，其實是<strong className="text-terracotta">「陪伴」</strong>。
+              </p>
+              <p className="pl-4 border-l-2 border-beige-dark/30 py-1 space-y-2 text-[0.95rem] text-brown-text/90">
+                陪伴學員從三分鐘熱度，到真的養成一個習慣；<br />
+                陪伴他們把想做卻一直沒做的事，一件一件打勾；也<br />
+                看著原本各自孤軍奮戰的人，慢慢變成彼此的隊友。
+              </p>
+              <p className="text-brown-dark font-medium border-l-4 border-terracotta pl-6 py-4 bg-white/50 rounded-r-xl">
+                因為真正的改變，從來不是靠意志力撐出來的，而是有人陪伴、有一群人和你溫暖的一起前進
+              </p>
+              <p className="text-brown-dark font-medium">
+                這裡會是一個讓內向者可以安心發光的地方。
+              </p>
+              <p className="font-bold text-terracotta text-lg pt-2">
+                不需要勉強自己，在我們的社群裡，你可以用最舒適自在的節奏，溫柔而堅定地展現自己的力量。
+              </p>
+            </div>
+
+            {/* Stats column */}
+            <div className="lg:col-span-5 space-y-6">
+              {/* Stat card 1: Design Expertise */}
+              <div className="bg-white/80 p-6 rounded-2xl border border-beige-dark/30 shadow-sm space-y-4">
+                <h3 className="font-bold text-brown-dark text-lg border-b border-beige-dark/30 pb-2">📒 手帳設計實力</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">⏳</span>
+                    <div>
+                      <div className="font-bold text-brown-dark text-base">200+ 小時</div>
+                      <div className="text-xs text-brown-text/70">手帳精心設計與反覆微調</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">📐</span>
+                    <div>
+                      <div className="font-bold text-brown-dark text-base">30+ 種</div>
+                      <div className="text-xs text-brown-text/70">精美實用模板無私分享</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">📄</span>
+                    <div>
+                      <div className="font-bold text-brown-dark text-base">3,000+ 頁</div>
+                      <div className="text-xs text-brown-text/70">細膩排版與格式優化經驗</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+
+              {/* Stat card 2: Companion Milestones */}
+              <div className="bg-white/80 p-6 rounded-2xl border border-beige-dark/30 shadow-sm space-y-4">
+                <h3 className="font-bold text-brown-dark text-lg border-b border-beige-dark/30 pb-2">🌱 暖心陪跑實績</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🏃</span>
+                    <div>
+                      <div className="font-bold text-brown-dark text-base">3 屆習慣養成班</div>
+                      <div className="text-xs text-brown-text/70">陪伴學員落實「21 天習慣養成 x 感恩日記」</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🎯</span>
+                    <div>
+                      <div className="font-bold text-brown-dark text-base">一百件事行動挑戰</div>
+                      <div className="text-xs text-brown-text/70">成功舉辦 2026 一百件事行動大挑戰</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🤝</span>
+                    <div>
+                      <div className="font-bold text-brown-dark text-base">20+ 場線上共學會</div>
+                      <div className="text-xs text-brown-text/70">凝聚志同道合的人生設計隊友</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
