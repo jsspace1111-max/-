@@ -19,7 +19,11 @@ import {
   PenTool,
   ArrowRight,
   Plus,
-  Minus
+  Minus,
+  Maximize2,
+  X,
+  Eye,
+  ChevronLeft
 } from 'lucide-react';
 
 // --- Components ---
@@ -138,6 +142,344 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
         )}
       </AnimatePresence>
     </div>
+  );
+};
+
+const studentWorksData = [
+  {
+    id: 'w1',
+    category: 'work',
+    title: '手帳作品：質感週計畫與目錄跳轉頁',
+    tag: '內頁設計',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/work-1.jpg'
+  },
+  {
+    id: 'w2',
+    category: 'work',
+    title: '手帳作品：生活紀錄與微習慣打卡排版',
+    tag: '內頁設計',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/work-2.png'
+  },
+  {
+    id: 'w3',
+    category: 'work',
+    title: '手帳作品：月計畫總覽與優雅格紋',
+    tag: '內頁設計',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/work-3.png'
+  },
+  {
+    id: 'w4',
+    category: 'work',
+    title: '手帳作品：目標對齊與個人願景藍圖',
+    tag: '內頁設計',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/work-4.png'
+  },
+  {
+    id: 'w5',
+    category: 'work',
+    title: '手帳作品：極簡風格日表與筆記空間',
+    tag: '內頁設計',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/work-5.png'
+  },
+  {
+    id: 'c1',
+    category: 'cover',
+    title: '手帳封面：經典溫暖奶茶色原創封面',
+    tag: '精美封面',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/cover-1.jpg'
+  },
+  {
+    id: 'c2',
+    category: 'cover',
+    title: '手帳封面：日系生活美學質感封面',
+    tag: '精美封面',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/cover-2.jpg'
+  },
+  {
+    id: 'c3',
+    category: 'cover',
+    title: '手帳封面：極簡典雅手帳視覺封面',
+    tag: '精美封面',
+    author: '第一季學員精選',
+    url: 'https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/cover-3.jpg'
+  },
+];
+
+const testimonialsTextData = [
+  {
+    text: (
+      <>
+        這次參加老師的課程真的很開心，學到了很多製作手帳的技巧——我覺得我最需要的是{" "}
+        <span className="text-terracotta font-bold">學會了跳轉功能！</span>{" "}
+        原來 Canva 除了應付工作報告之外，也可以拿來製作手帳，素材的設計風格都可以自己調整。超級感謝老師開設這一次的課程，甚至還{" "}
+        <span className="text-terracotta font-bold">提供了很多的靈感來源 and 販售方式！</span>
+      </>
+    ),
+    author: "A 小姐"
+  },
+  {
+    text: (
+      <>
+        對於手帳新手來說，我其實根本不知道手帳長什麼樣子。幸運的是，{" "}
+        <span className="text-terracotta font-bold">老師提供了模板，讓我不必從零開始思考</span>{" "}
+        手帳應該包含哪些元素。老師還一步步指導我們操作 Canva，教導我們製作封面、導航列，還會{" "}
+        <span className="text-terracotta font-bold">即時在社群裡解答疑惑</span>。即使是新手如我，也{" "}
+        <span className="text-terracotta font-bold">快速掌握了這些技能</span>。
+      </>
+    ),
+    author: "L 先生"
+  },
+  {
+    text: (
+      <>
+        <span className="text-terracotta font-bold">最讓我驚喜的是跳轉功能</span>。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我{" "}
+        <span className="text-terracotta font-bold">學會了製作可跳轉的目錄 and 導航列——這對懶人來說簡集是福音！</span>
+      </>
+    ),
+    author: "C 小姐"
+  },
+  {
+    text: (
+      <>
+        沒想到自己能完成一個電子手帳，也{" "}
+        <span className="text-terracotta font-bold">成功返現了，真的蠻感動的！</span>{" "}
+        以前一直使用別人設計的模板，某些欄位真的不是自己會用到的。學會自己做電子手帳後，就可以{" "}
+        <span className="text-terracotta font-bold">客製化頁面、欄位、美工，設計出真正符合自己使用需求的手帳</span>，我覺得很棒！
+      </>
+    ),
+    author: "W 姐妹"
+  },
+  {
+    text: (
+      <>
+        一直以來都找不到理想的手帳，一直到老師開這個課，認真跟上課程，開始學著製作自己喜歡的手帳，真的很謝謝老師願意傾囊相授！這樣我每一年都{" "}
+        <span className="text-terracotta font-bold">不需要為了找不到手帳而煩惱，還可以擁有自己風格的手帳！</span>{" "}
+        一直覺得跳轉功能很難，結果沒想到老師不藏私，{" "}
+        <span className="text-terracotta font-bold">原來沒有這麼難，非常有趣！</span>
+      </>
+    ),
+    author: "H 小姐"
+  },
+  {
+    text: (
+      <>
+        這次的課程不只讓我學到技能，老師還為我們{" "}
+        <span className="text-terracotta font-bold">設計好了回收路徑</span>。感謝老師開啟返現計畫，讓我以{" "}
+        <span className="text-terracotta font-bold">輕鬆、無痛且有明確方向的方式</span>，學會了一項新技能，還能{" "}
+        <span className="text-terracotta font-bold">推出自己的新產品！</span>
+      </>
+    ),
+    author: "M 小姐"
+  }
+];
+
+const StudentShowcase = () => {
+  const [activeTab, setActiveTab] = useState<'all' | 'work' | 'cover' | 'reviews'>('all');
+  const [modalIndex, setModalIndex] = useState<number | null>(null);
+
+  const filteredImages = activeTab === 'all' 
+    ? studentWorksData 
+    : activeTab === 'reviews' 
+      ? [] 
+      : studentWorksData.filter(item => item.category === activeTab);
+
+  return (
+    <section className="bg-cream px-6 py-20 relative overflow-hidden">
+      <div className="max-w-[1100px] mx-auto">
+        <div className="text-center mb-12">
+          <span className="text-terracotta text-sm md:text-base font-bold tracking-widest uppercase block mb-2">
+            STUDENT SHOWCASE & REVIEWS
+          </span>
+          <h2 className="text-[2rem] md:text-[2.6rem] text-brown-dark font-bold leading-tight mb-4">
+            學員作品與好評見證
+          </h2>
+          <p className="text-brown-text/80 text-base md:text-lg max-w-2xl mx-auto font-medium">
+            從零基礎到親手設計出專屬電子手帳，看看第一季學員們精美的成果與真誠分享
+          </p>
+
+          {/* Interactive Category Tabs */}
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
+            {[
+              { id: 'all', label: '✨ 全部作品 (8)' },
+              { id: 'work', label: '📒 內頁設計 (5)' },
+              { id: 'cover', label: '🎨 精美封面 (3)' },
+              { id: 'reviews', label: '💬 心得評價 (6)' },
+            ].map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as any)}
+                className={`px-5 py-2.5 rounded-full text-sm sm:text-base font-bold transition-all duration-300 shadow-xs cursor-pointer ${
+                  activeTab === tab.id
+                    ? 'bg-terracotta text-white shadow-md shadow-terracotta/30 scale-105'
+                    : 'bg-white text-brown-dark hover:bg-beige-light border border-beige-dark/30'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Gallery Grid for Images */}
+        {activeTab !== 'reviews' && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {filteredImages.map((item, idx) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08 }}
+                onClick={() => setModalIndex(idx)}
+                className={`bg-white p-3.5 sm:p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform group cursor-pointer relative border border-beige-dark/20 flex flex-col justify-between ${
+                  idx % 2 === 0 ? 'sm:-rotate-1' : 'sm:rotate-1'
+                } hover:rotate-0 hover:-translate-y-2 hover:z-20`}
+              >
+                {/* Image Container */}
+                <div className="relative overflow-hidden rounded-xl bg-beige-light aspect-4/3 sm:aspect-square flex items-center justify-center">
+                  <img
+                    src={item.url}
+                    alt={item.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Badge */}
+                  <span className="absolute top-3 left-3 bg-terracotta/90 backdrop-blur-xs text-white text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                    {item.tag}
+                  </span>
+
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-brown-dark/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white p-4 text-center backdrop-blur-[2px]">
+                    <Maximize2 className="w-8 h-8 mb-2 animate-bounce" />
+                    <span className="text-sm font-bold tracking-wider bg-white/20 px-4 py-1.5 rounded-full border border-white/40">
+                      點擊放大觀看
+                    </span>
+                  </div>
+                </div>
+
+                {/* Card Info */}
+                <div className="pt-3.5 px-1 flex items-center justify-between text-left">
+                  <div>
+                    <h3 className="font-bold text-brown-dark text-sm sm:text-base line-clamp-1 group-hover:text-terracotta transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-brown-text/60 mt-0.5">{item.author}</p>
+                  </div>
+                  <div className="w-8 h-8 rounded-full bg-beige-light group-hover:bg-terracotta group-hover:text-white flex items-center justify-center text-brown-dark transition-colors shrink-0 ml-2">
+                    <Eye className="w-4 h-4" />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
+
+        {/* Written Testimonials Grid */}
+        {(activeTab === 'reviews' || activeTab === 'all') && (
+          <div className="mt-8">
+            {activeTab === 'all' && (
+              <h3 className="text-xl md:text-2xl font-bold text-brown-dark text-center mb-8 border-t border-dashed border-beige-dark/30 pt-12">
+                💬 過往學員心得回饋
+              </h3>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {testimonialsTextData.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="bg-white p-8 rounded-2xl shadow-sm border border-beige-light flex flex-col justify-between relative group hover:shadow-md transition-shadow text-left"
+                >
+                  <div>
+                    <div className="text-terracotta/20 text-5xl font-serif absolute top-4 left-4 group-hover:text-terracotta/40 transition-colors">“</div>
+                    <div className="text-[0.95rem] text-brown-text leading-relaxed relative z-10 pt-4 italic">
+                      {item.text}
+                    </div>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-dashed border-beige-light text-right text-sm text-brown-text/60 font-medium font-mono">
+                    ———— {item.author}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Modal Lightbox */}
+        <AnimatePresence>
+          {modalIndex !== null && filteredImages[modalIndex] && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6"
+              onClick={() => setModalIndex(null)}
+            >
+              <div
+                className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl p-4 sm:p-6 max-h-[90vh] flex flex-col"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setModalIndex(null)}
+                  className="absolute top-4 right-4 z-20 w-10 h-10 bg-brown-dark/70 hover:bg-brown-dark text-white rounded-full flex items-center justify-center transition-colors shadow-md cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+
+                {/* Image Frame */}
+                <div className="relative overflow-hidden rounded-2xl bg-beige-light flex-1 min-h-[300px] max-h-[70vh] flex items-center justify-center p-2">
+                  <img
+                    src={filteredImages[modalIndex].url}
+                    alt={filteredImages[modalIndex].title}
+                    className="max-h-[65vh] w-auto max-w-full object-contain mx-auto rounded-xl shadow-md"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Footer Controls & Title */}
+                <div className="mt-4 flex items-center justify-between px-2 pt-2 border-t border-beige-light">
+                  <div className="text-left">
+                    <span className="text-xs font-bold text-terracotta uppercase tracking-wider bg-terracotta/10 px-3 py-1 rounded-full inline-block mb-1">
+                      {filteredImages[modalIndex].tag}
+                    </span>
+                    <h3 className="text-base sm:text-lg font-bold text-brown-dark">
+                      {filteredImages[modalIndex].title}
+                    </h3>
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button
+                      disabled={modalIndex === 0}
+                      onClick={() => setModalIndex(prev => (prev !== null && prev > 0 ? prev - 1 : prev))}
+                      className="p-3 rounded-full bg-beige-light hover:bg-terracotta hover:text-white text-brown-dark disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      disabled={modalIndex === filteredImages.length - 1}
+                      onClick={() => setModalIndex(prev => (prev !== null && prev < filteredImages.length - 1 ? prev + 1 : prev))}
+                      className="p-3 rounded-full bg-beige-light hover:bg-terracotta hover:text-white text-brown-dark disabled:opacity-30 disabled:cursor-not-allowed transition-colors cursor-pointer"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </section>
   );
 };
 
@@ -439,14 +781,23 @@ export default function App() {
       {/* Early Bird Countdown Section */}
       <section id="pricing" className="bg-[#F7ECE9] border-y border-[#E8CDC8] px-6 py-16 text-center">
         <div className="max-w-[1100px] mx-auto">
-          <div className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-beige-dark/30 shadow-md">
+          <div className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-beige-dark/30 shadow-md flex flex-col items-center">
             <span className="text-terracotta text-sm md:text-base font-bold tracking-widest uppercase block mb-3">
               ⏰ 第二季超早鳥優惠倒數中
             </span>
-            <div className="bg-terracotta text-white py-3 px-4 rounded-lg text-sm md:text-base font-bold tracking-wider mb-4 shadow-xs">
+            <div className="bg-terracotta text-white py-3 px-4 rounded-lg text-sm md:text-base font-bold tracking-wider mb-4 shadow-xs w-full">
               超早鳥優惠 NT$2,880，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/24 起原價 NT$4,080
             </div>
             <CountdownTimer />
+            
+            <a 
+              href="https://jsspace1111.com/product/ldp-project/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-hover text-white px-8 py-3.5 rounded-full text-base sm:text-lg font-bold shadow-lg shadow-terracotta/25 hover:scale-105 active:scale-95 transition-all"
+            >
+              👉 立即搶購超早鳥優惠
+            </a>
           </div>
         </div>
       </section>
@@ -459,9 +810,9 @@ export default function App() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="mb-12 inline-block"
+            className="mb-10 inline-block"
           >
-            <h2 className="text-[2.2rem] md:text-[3.2rem] text-white bg-terracotta px-12 py-6 rounded-full shadow-2xl shadow-terracotta/40 transform -rotate-2 font-bold tracking-tight">
+            <h2 className="text-[1.75rem] md:text-[2.55rem] text-white bg-terracotta px-10 py-4.5 rounded-full shadow-2xl shadow-terracotta/40 transform -rotate-2 font-bold tracking-tight">
               返現挑戰
             </h2>
           </motion.div>
@@ -549,101 +900,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-cream px-6 py-20">
-        <div className="max-w-[1100px] mx-auto">
-          <h2 className="text-[1.8rem] text-brown-dark text-center mb-16 font-bold">過往學員怎麼說？</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                text: (
-                  <>
-                    這次參加老師的課程真的很開心，學到了很多製作手帳的技巧——我覺得我最需要的是{" "}
-                    <span className="text-terracotta font-bold">學會了跳轉功能！</span>{" "}
-                    原來 Canva 除了應付工作報告之外，也可以拿來製作手帳，素材的設計風格都可以自己調整。超級感謝老師開設這一次的課程，甚至還{" "}
-                    <span className="text-terracotta font-bold">提供了很多的靈感來源 and 販售方式！</span>
-                  </>
-                ),
-                author: "A 小姐"
-              },
-              {
-                text: (
-                  <>
-                    對於手帳新手來說，我其實根本不知道手帳長什麼樣子。幸運的是，{" "}
-                    <span className="text-terracotta font-bold">老師提供了模板，讓我不必從零開始思考</span>{" "}
-                    手帳應該包含哪些元素。老師還一步步指導我們操作 Canva，教導我們製作封面、導航列，還會{" "}
-                    <span className="text-terracotta font-bold">即時在社群裡解答疑惑</span>。即使是新手如我，也{" "}
-                    <span className="text-terracotta font-bold">快速掌握了這些技能</span>。
-                  </>
-                ),
-                author: "L 先生"
-              },
-              {
-                text: (
-                  <>
-                    <span className="text-terracotta font-bold">最讓我驚喜的是跳轉功能</span>。以前用平板寫筆記時，遇到需要跳頁的情況總是要滑很久，非常不方便。在這次課程中，我{" "}
-                    <span className="text-terracotta font-bold">學會了製作可跳轉的目錄 and 導航列——這對懶人來說簡集是福音！</span>
-                  </>
-                ),
-                author: "C 小姐"
-              },
-              {
-                text: (
-                  <>
-                    沒想到自己能完成一個電子手帳，也{" "}
-                    <span className="text-terracotta font-bold">成功返現了，真的蠻感動的！</span>{" "}
-                    以前一直使用別人設計的模板，某些欄位真的不是自己會用到的。學會自己做電子手帳後，就可以{" "}
-                    <span className="text-terracotta font-bold">客製化頁面、欄位、美工，設計出真正符合自己使用需求的手帳</span>，我覺得很棒！
-                  </>
-                ),
-                author: "W 姐妹"
-              },
-              {
-                text: (
-                  <>
-                    一直以來都找不到理想的手帳，一直到老師開這個課，認真跟上課程，開始學著製作自己喜歡的手帳，真的很謝謝老師願意傾囊相授！這樣我每一年都{" "}
-                    <span className="text-terracotta font-bold">不需要為了找不到手帳而煩惱，還可以擁有自己風格的手帳！</span>{" "}
-                    一直覺得跳轉功能很難，結果沒想到老師不藏私，{" "}
-                    <span className="text-terracotta font-bold">原來沒有這麼難，非常有趣！</span>
-                  </>
-                ),
-                author: "H 小姐"
-              },
-              {
-                text: (
-                  <>
-                    這次的課程不只讓我學到技能，老師還為我們{" "}
-                    <span className="text-terracotta font-bold">設計好了回收路徑</span>。感謝老師開啟返現計畫，讓我以{" "}
-                    <span className="text-terracotta font-bold">輕鬆、無痛且有明確方向的方式</span>，學會了一項新技能，還能{" "}
-                    <span className="text-terracotta font-bold">推出自己的新產品！</span>
-                  </>
-                ),
-                author: "M 小姐"
-              }
-            ].map((item, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-beige-light flex flex-col justify-between relative group hover:shadow-md transition-shadow"
-              >
-                <div>
-                  <div className="text-terracotta/20 text-5xl font-serif absolute top-4 left-4 group-hover:text-terracotta/40 transition-colors">“</div>
-                  <div className="text-[0.95rem] text-brown-text leading-relaxed relative z-10 pt-4 italic">
-                    {item.text}
-                  </div>
-                </div>
-                <div className="mt-6 pt-4 border-t border-dashed border-beige-light text-right text-sm text-brown-text/60 font-medium font-mono">
-                  ———— {item.author}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Student Showcase & Reviews */}
+      <StudentShowcase />
 
       {/* Who Is This For */}
       <section className="bg-cream px-6 py-20">
