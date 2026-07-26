@@ -147,57 +147,119 @@ export default function App() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-cream px-6 py-16 md:py-24">
-        <div className="max-w-[1100px] mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-[2.5rem] md:text-[3.8rem] text-brown-dark leading-tight mb-8 font-bold"
-          >
-            2027 重新設計人生<br className="hidden md:block" />手帳陪跑返現計劃
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg md:text-2xl text-terracotta max-w-3xl mx-auto mb-10 leading-relaxed font-bold tracking-wider"
-          >
-            健康 X 工作 X 玩樂 X 愛 X 顯化，人生設計團隊
-          </motion.p>
-          <div className="text-[1.1rem] md:text-[1.2rem] text-brown-text/80 mb-10 font-medium">
-            第二季開課時間 : 2026.9.1 - 9.22
-          </div>
+      <section className="bg-cream px-6 py-12 md:py-20 lg:py-24 overflow-hidden relative">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 text-left space-y-6">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-2 text-sm md:text-base font-bold tracking-widest text-brown-text/60 uppercase"
+              >
+                <span className="w-8 h-[2px] bg-terracotta/60 inline-block"></span>
+                <span>Redesign 2027</span>
+              </motion.div>
 
-          <div className="mb-12">
-            <span className="text-brown-text/70 text-base md:text-lg font-bold mb-4 block">第二季超早鳥優惠倒數</span>
-            <CountdownTimer />
-          </div>
+              <motion.h1 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-[1.85rem] sm:text-[2.35rem] md:text-[3rem] text-brown-dark leading-[1.25] font-bold tracking-tight"
+              >
+                2027 重新設計人生<br />
+                <span className="relative inline-block mt-1">
+                  手帳陪跑返現計劃
+                  <span className="absolute left-0 bottom-1 w-full h-3 bg-terracotta/15 -z-10 rounded"></span>
+                </span>
+              </motion.h1>
 
-          <div className="flex flex-col items-center gap-6">
-            <div className="text-xl">
-              超早鳥優惠價格 <span className="text-red-600 text-3xl font-extrabold ml-1">NT$2,880</span>
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="space-y-3"
+              >
+                <p className="text-lg md:text-xl text-terracotta font-bold tracking-wide">
+                  健康 × 工作 × 玩樂 × 愛 × 顯化
+                </p>
+                <p className="text-sm md:text-base text-brown-text/80 leading-relaxed max-w-xl space-y-1">
+                  畫家可以一個人創作出曠世巨作，但 iPhone 不可能靠一位設計師完成<br />
+                  你的人生就是非凡的設計，不用自己想破頭，一起來組一個非凡人生設計團隊
+                </p>
+                <p className="text-sm md:text-base text-brown-dark/70 font-medium pt-1">
+                  第二季開課時間：2026.9.1 - 9.22
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-wrap items-center gap-4 pt-2"
+              >
+                <a 
+                  href="https://jsspace1111.com/product/ldp-project/" 
+                  className="bg-terracotta hover:bg-terracotta-hover text-white px-8 py-4 rounded-full text-base md:text-lg font-bold transition-all shadow-lg shadow-terracotta/20 flex items-center gap-2 group"
+                >
+                  <span>立即報名加入</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a 
+                  href="#courses" 
+                  className="text-brown-dark/70 hover:text-brown-dark text-base font-semibold px-4 py-2 border-b-2 border-transparent hover:border-brown-dark transition-all"
+                >
+                  查看課程內容 ↓
+                </a>
+              </motion.div>
+
+              {/* Trust Badges / Highlights */}
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex flex-wrap items-center gap-2 md:gap-3 pt-4 text-xs md:text-sm text-brown-dark font-medium"
+              >
+                <div className="bg-white px-3.5 py-2 rounded-full border border-beige-dark/30 shadow-xs flex items-center gap-1.5">
+                  <span className="text-terracotta font-bold">✓</span> 返現 NT$1,000 學費挑戰
+                </div>
+                <div className="bg-white px-3.5 py-2 rounded-full border border-beige-dark/30 shadow-xs flex items-center gap-1.5">
+                  <span>📅</span> 2026.9.1 - 9.22 開課
+                </div>
+                <div className="bg-white px-3.5 py-2 rounded-full border border-beige-dark/30 shadow-xs flex items-center gap-1.5">
+                  <span>🤝</span> 4 週陪伴設計團隊
+                </div>
+              </motion.div>
             </div>
-            <a 
-              href="https://jsspace1111.com/product/ldp-project/" 
-              className="bg-terracotta hover:bg-terracotta-hover text-white px-10 py-4 rounded-sm text-lg font-medium transition-colors shadow-lg shadow-terracotta/20"
-            >
-              我要加入課程 →
-            </a>
+
+            {/* Right Photo Column */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end relative mt-6 lg:mt-0">
+              <div className="relative">
+                {/* Soft ambient gradient glow background */}
+                <div className="absolute -inset-4 bg-gradient-to-tr from-terracotta/20 via-beige-light to-amber-100/50 rounded-t-[200px] rounded-b-3xl blur-2xl opacity-70"></div>
+
+                {/* Arch-shaped image frame */}
+                <div className="relative w-[300px] h-[390px] sm:w-[355px] sm:h-[460px] md:w-[400px] md:h-[520px] rounded-t-[160px] sm:rounded-t-[190px] rounded-b-3xl overflow-hidden shadow-2xl shadow-brown-dark/15">
+                  <img 
+                    src="https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/landing-page-1.png" 
+                    alt="Jessica - J.S. Space" 
+                    className="w-full h-full object-cover object-center"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
-
-      {/* Early Bird Banner */}
-      <div className="bg-terracotta text-white py-5 px-6 text-center text-base md:text-lg font-bold tracking-wider">
-        🗓 超早鳥優惠 NT$2,880，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/24 起原價 NT$4,080
-      </div>
 
       {/* Pain Points */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-[1.8rem] md:text-3xl text-brown-dark text-center mb-6 font-bold leading-relaxed">
-            你已經下定決心，不要再過這種「差不多」的人生。
+            你已經下定決心，不要再過這種「差不多」的人生
           </h2>
           <p className="text-center text-brown-text/90 mb-16 max-w-3xl mx-auto leading-relaxed text-lg md:text-xl font-medium">
             你有認真想過，你想要過什麼樣的人生嗎？
@@ -300,14 +362,7 @@ export default function App() {
             <p>
               這套課程的設計，靈感來自史丹佛大學廣受歡迎的「設計你的人生」概念，變成更貼近你、更日常的方式。
             </p>
-            <div className="py-6 border-y border-beige-dark/30 my-8 space-y-4">
-              <p className="font-bold text-brown-dark text-xl tracking-wider">《Designing Your Life》</p>
-              <p className="text-brown-text/90 leading-relaxed font-medium">
-                畫家可以一個人創作出曠世巨作，<br />
-                但 iPhone 卻沒辦法只靠一個設計師就設計出來。
-              </p>
-            </div>
-            <p className="font-medium text-brown-dark text-lg">
+            <p className="font-medium text-brown-dark text-lg pt-2">
               我相信，每個人的人生都是一項非凡的設計。<br />
               而這種設計，你不需要一個人想破頭。<br />
               我們可以靠一個團隊，結合彼此的點子，一起完成你的人生手帳。
@@ -317,7 +372,7 @@ export default function App() {
       </section>
 
       {/* Curriculum Timeline */}
-      <section className="bg-cream px-6 py-20">
+      <section id="courses" className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto">
           <h2 className="text-[2rem] md:text-3xl text-brown-dark text-center mb-6 font-bold leading-tight">6 場直播・重新設計 2027 人生</h2>
           <p className="text-center text-brown-text/70 mb-12 max-w-2xl mx-auto text-base">
@@ -381,9 +436,25 @@ export default function App() {
         </div>
       </section>
 
+      {/* Early Bird Countdown Section */}
+      <section id="pricing" className="bg-[#F7ECE9] border-y border-[#E8CDC8] px-6 py-16 text-center">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-beige-dark/30 shadow-md">
+            <span className="text-terracotta text-sm md:text-base font-bold tracking-widest uppercase block mb-3">
+              ⏰ 第二季超早鳥優惠倒數中
+            </span>
+            <div className="bg-terracotta text-white py-3 px-4 rounded-lg text-sm md:text-base font-bold tracking-wider mb-4 shadow-xs">
+              超早鳥優惠 NT$2,880，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/24 起原價 NT$4,080
+            </div>
+            <CountdownTimer />
+          </div>
+        </div>
+      </section>
+
       {/* Cashback Challenge */}
       <section className="bg-beige-light px-6 py-24 text-center">
         <div className="max-w-[1100px] mx-auto">
+
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -623,19 +694,17 @@ export default function App() {
                 J.S. Space 的創辦人，經營手帳品牌邁入第 3 年
               </p>
               <p>
-                我買過一堆手帳，卻沒有一本真的用得下去。
+                直到我開始動手「自己設計」手帳和人生<br />
+                才找到人生的方向，對齊自己的目標。
               </p>
               <p>
-                有很長一段時間，我以為是自己不夠自律。
+                手帳從來都只是一個設計人生的工具。
+              </p>
+              <p className="font-semibold text-terracotta text-lg">
+                你想活成什麼樣子，才是真正的重點。
               </p>
               <p>
-                直到我開始動手「自己設計」，才第一次擁有一本真正屬於我的人生手帳。
-              </p>
-              <p>
-                後來我才懂，手帳從來都只是一個設計人生的工具。<span className="font-semibold text-terracotta text-lg decoration-wavy underline">你想活成什麼樣子，才是真正的重點。</span>
-              </p>
-              <p>
-                而做著做著，我發現自己更喜歡的，其實是<strong className="text-terracotta">「陪伴」</strong>這件事。
+                這些過程中發現我更喜歡的是「陪伴」。
               </p>
               <p className="pl-4 border-l-2 border-beige-dark/30 py-1 space-y-2 text-[0.95rem] text-brown-text/90">
                 陪伴學員從三分鐘熱度，到真的養成一個習慣。<br />
@@ -647,37 +716,49 @@ export default function App() {
                 更多時候，是因為有人陪伴、有一群人願意跟你一起慢慢走。
               </p>
               <p className="text-brown-dark font-medium">
-                我想讓這裡，成為一個內向的人也可以安心發光的地方。
+                這裡是，內向的人也可以安心發光的地方。
               </p>
               <p className="font-bold text-terracotta text-lg pt-2">
-                你不需要勉強自己。在這裡，你可以用最舒適自在的節奏，溫柔而堅定地，把屬於你的力量長出來。
+                不需要勉強自己。可以用最舒適自在的節奏，溫柔而堅定地，把屬於你的力量長出來。
               </p>
             </div>
 
             {/* Stats column */}
             <div className="lg:col-span-5 space-y-6">
+              {/* Jessica Photo - Circular with no white border */}
+              <div className="flex justify-center">
+                <div className="w-[220px] h-[220px] sm:w-[260px] sm:h-[260px] md:w-[280px] md:h-[280px] rounded-full overflow-hidden shadow-lg border-none">
+                  <img 
+                    src="https://raw.githubusercontent.com/jsspace1111-max/landingpage-image/main/Jessica.jpg" 
+                    alt="Jessica - J.S. Space" 
+                    className="w-full h-full object-cover object-center"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+
               {/* Stat card 1: Design Expertise */}
               <div className="bg-white/80 p-6 rounded-2xl border border-beige-dark/30 shadow-sm space-y-4">
-                <h3 className="font-bold text-brown-dark text-lg border-b border-beige-dark/30 pb-2">📒 手帳設計實力</h3>
+                <h3 className="font-bold text-brown-dark text-[1.05rem] border-b border-beige-dark/30 pb-2">📒 手帳設計實力</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">⏳</span>
                     <div>
-                      <div className="font-bold text-brown-dark text-base">200+ 小時</div>
+                      <div className="font-bold text-brown-dark text-[0.9rem]">200+ 小時</div>
                       <div className="text-xs text-brown-text/70">手帳精心設計與反覆微調</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">📐</span>
                     <div>
-                      <div className="font-bold text-brown-dark text-base">30+ 種</div>
+                      <div className="font-bold text-brown-dark text-[0.9rem]">30+ 種</div>
                       <div className="text-xs text-brown-text/70">精美實用模板無私分享</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">📄</span>
                     <div>
-                      <div className="font-bold text-brown-dark text-base">3,000+ 頁</div>
+                      <div className="font-bold text-brown-dark text-[0.9rem]">3,000+ 頁</div>
                       <div className="text-xs text-brown-text/70">細膩排版與格式優化經驗</div>
                     </div>
                   </div>
@@ -686,26 +767,26 @@ export default function App() {
 
               {/* Stat card 2: Companion Milestones */}
               <div className="bg-white/80 p-6 rounded-2xl border border-beige-dark/30 shadow-sm space-y-4">
-                <h3 className="font-bold text-brown-dark text-lg border-b border-beige-dark/30 pb-2">🌱 暖心陪跑實績</h3>
+                <h3 className="font-bold text-brown-dark text-[1.05rem] border-b border-beige-dark/30 pb-2">🌱 暖心陪跑實績</h3>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🏃</span>
                     <div>
-                      <div className="font-bold text-brown-dark text-base">3 屆習慣養成班</div>
+                      <div className="font-bold text-brown-dark text-[0.9rem]">3 屆習慣養成班</div>
                       <div className="text-xs text-brown-text/70">陪伴學員落實「21 天習慣養成 x 感恩日記」</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🎯</span>
                     <div>
-                      <div className="font-bold text-brown-dark text-base">一百件事行動挑戰</div>
+                      <div className="font-bold text-brown-dark text-[0.9rem]">一百件事行動挑戰</div>
                       <div className="text-xs text-brown-text/70">成功舉辦 2026 一百件事行動大挑戰</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">🤝</span>
                     <div>
-                      <div className="font-bold text-brown-dark text-base">20+ 場線上共學會</div>
+                      <div className="font-bold text-brown-dark text-[0.9rem]">20+ 場線上共學會</div>
                       <div className="text-xs text-brown-text/70">凝聚志同道合的人生設計隊友</div>
                     </div>
                   </div>
@@ -851,7 +932,7 @@ export default function App() {
           <div className="space-y-4">
             <FAQItem 
               question="Q：我完全沒用過 Canva，可以學嗎？" 
-              answer="可以！這堂課從零開始，不需要任何設計基礎。但課程不會詳細教 Canva 所有功能，只會教設計電子手帳會用到的部分。" 
+              answer="第二季學員可以觀看第一季的課程回放。第一季是針對詳細的 Canva 操作教學，所以不需要任何設計基礎也可以參加喔。" 
             />
             <FAQItem 
               question="Q：我有 Canva 基礎，這堂課還適合我嗎？" 
@@ -867,7 +948,7 @@ export default function App() {
             />
             <FAQItem 
               question="Q：需要準備什麼工具？" 
-              answer="有電腦或筆電即可，推薦使用筆電或桌機操作 Canva，體驗較佳。Canva Pro 會在開課前提供，不需要自己購買。" 
+              answer="有電腦或筆電即可，推薦使用筆電或桌機操作 Canva，體驗較佳。" 
             />
             <FAQItem 
               question="Q：需要有 iPad 或 Apple Pencil 嗎？" 
