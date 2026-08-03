@@ -68,7 +68,7 @@ const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date('2026-08-02T23:59:59+08:00').getTime();
+    const targetDate = new Date('2026-08-23T23:59:59+08:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -783,10 +783,13 @@ export default function App() {
         <div className="max-w-[1100px] mx-auto">
           <div className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-beige-dark/30 shadow-md flex flex-col items-center">
             <span className="text-terracotta text-sm md:text-base font-bold tracking-widest uppercase block mb-3">
-              ⏰ 第二季超早鳥優惠倒數中
+              ⏰ 第二季早鳥優惠倒數中
             </span>
-            <div className="bg-terracotta text-white py-3 px-4 rounded-lg text-sm md:text-base font-bold tracking-wider mb-4 shadow-xs w-full">
-              超早鳥優惠 NT$2,880，8/2（日）截止 ｜ 8/3 起 NT$3,280 | 8/24 起原價 NT$4,080
+            <div className="bg-terracotta text-white py-3 px-4 rounded-lg text-base md:text-lg font-bold tracking-wider mb-2 shadow-xs w-full">
+              早鳥優惠價格 NT$3,280
+            </div>
+            <div className="text-brown-dark text-sm md:text-base font-bold tracking-wide mb-4">
+              優惠期限 : 2026.8.23（日）23:59 截止 ｜ 8/24 起原價 NT$4,080
             </div>
             <CountdownTimer />
             
@@ -796,7 +799,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-hover text-white px-8 py-3.5 rounded-full text-base sm:text-lg font-bold shadow-lg shadow-terracotta/25 hover:scale-105 active:scale-95 transition-all"
             >
-              👉 立即搶購超早鳥優惠
+              👉 立即搶購早鳥優惠
             </a>
           </div>
         </div>
@@ -824,8 +827,8 @@ export default function App() {
           <div className="flex flex-col md:flex-row gap-8 justify-center max-w-[900px] mx-auto mb-16 px-4">
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">💳</span>
-              <span className="text-sm text-brown-text/60 mb-2 font-medium">第二季超早鳥優惠</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,880</span>
+              <span className="text-sm text-brown-text/60 mb-2 font-medium">第二季早鳥優惠</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$3,280</span>
             </div>
             <div className="bg-brown-dark p-10 rounded-2xl shadow-xl flex-1 flex flex-col items-center transform md:scale-110 z-10 text-white">
               <span className="text-3xl mb-4">🎁</span>
@@ -835,7 +838,7 @@ export default function App() {
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">✨</span>
               <span className="text-sm text-brown-text/60 mb-2 font-medium">實際成本</span>
-              <span className="text-2xl font-serif text-brown-dark font-bold">NT$1,880</span>
+              <span className="text-2xl font-serif text-brown-dark font-bold">NT$2,280</span>
             </div>
           </div>
 
@@ -870,8 +873,8 @@ export default function App() {
       {/* Value After Cashback */}
       <section className="bg-cream px-6 py-20">
         <div className="max-w-[1100px] mx-auto text-center">
-          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$1,880，就能獲得</h2>
-          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（課程價格 NT$2,880 － 完課返現 NT$1,000）</span>
+          <h2 className="text-[2.2rem] md:text-[2.5rem] text-brown-dark mb-2 font-bold leading-tight">完成課程，你只要花 NT$2,280，就能獲得</h2>
+          <span className="text-[0.8rem] text-brown-text/50 block mb-16 tracking-widest uppercase">（課程價格 NT$3,280 － 完課返現 NT$1,000）</span>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
             {[
@@ -1239,8 +1242,11 @@ export default function App() {
             <p className="mt-4 font-medium italic">剩下的，我們一起來完成。</p>
           </div>
           
-          <div className="text-xl mb-10">
-            第二季超早鳥優惠價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$2,880</span>
+          <div className="text-xl mb-2 font-medium">
+            早鳥優惠價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$3,280</span>
+          </div>
+          <div className="text-sm font-semibold text-brown-text/70 mb-10">
+            優惠期限 : 2026.8.23 23:59 截止
           </div>
           
           <a 
