@@ -783,10 +783,10 @@ export default function App() {
         <div className="max-w-[1100px] mx-auto">
           <div className="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-2xl border border-beige-dark/30 shadow-md flex flex-col items-center">
             <span className="text-terracotta text-sm md:text-base font-bold tracking-widest uppercase block mb-3">
-              ⏰ 第二季超早鳥優惠倒數中
+              ⏰ 第二季早鳥優惠倒數中
             </span>
             <div className="bg-terracotta text-white py-3 px-4 rounded-lg text-base md:text-lg font-bold tracking-wider mb-2 shadow-xs w-full">
-              超早鳥優惠價格 NT$3,280
+              早鳥優惠價格 NT$3,280
             </div>
             <div className="text-brown-dark text-sm md:text-base font-bold tracking-wide mb-4">
               優惠期限 : 2026.8.23（日）23:59 截止 ｜ 8/24 起原價 NT$4,080
@@ -799,7 +799,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center justify-center bg-terracotta hover:bg-terracotta-hover text-white px-8 py-3.5 rounded-full text-base sm:text-lg font-bold shadow-lg shadow-terracotta/25 hover:scale-105 active:scale-95 transition-all"
             >
-              👉 立即搶購超早鳥優惠
+              👉 立即搶購早鳥優惠
             </a>
           </div>
         </div>
@@ -827,7 +827,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row gap-8 justify-center max-w-[900px] mx-auto mb-16 px-4">
             <div className="bg-white p-10 rounded-2xl shadow-sm flex-1 flex flex-col items-center border border-beige-dark/30">
               <span className="text-3xl mb-4">💳</span>
-              <span className="text-sm text-brown-text/60 mb-2 font-medium">第二季超早鳥優惠</span>
+              <span className="text-sm text-brown-text/60 mb-2 font-medium">第二季早鳥優惠</span>
               <span className="text-2xl font-serif text-brown-dark font-bold">NT$3,280</span>
             </div>
             <div className="bg-brown-dark p-10 rounded-2xl shadow-xl flex-1 flex flex-col items-center transform md:scale-110 z-10 text-white">
@@ -1086,8 +1086,8 @@ export default function App() {
                 <span className="text-sm">－NT$1,000</span>
               </div>
               <div className="flex justify-between items-center p-6 bg-terracotta text-white font-bold">
-                <span className="text-lg">第二季超早鳥優惠</span>
-                <span className="text-2xl font-serif">NT$2,880</span>
+                <span className="text-lg">第二季早鳥優惠</span>
+                <span className="text-2xl font-serif">NT$3,280</span>
               </div>
             </div>
           </div>
@@ -1123,9 +1123,9 @@ export default function App() {
           </div>
 
           <div className="bg-brown-dark rounded-2xl p-12 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">超早鳥優惠價格 NT$2,880</h3>
+            <h3 className="text-2xl font-bold mb-4">早鳥優惠價格 NT$3,280</h3>
             <p className="text-white/80 text-base md:text-lg mb-8 px-4 font-medium">
-              優惠期限 : 2026.8.2
+              優惠期限 : 2026.8.23（日）23:59 截止
             </p>
             <a 
               href="https://jsspace1111.com/product/ldp-project/" 
@@ -1243,7 +1243,7 @@ export default function App() {
           </div>
           
           <div className="text-xl mb-2 font-medium">
-            超早鳥優惠價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$3,280</span>
+            早鳥優惠價格 <span className="text-terracotta text-3xl font-bold ml-1">NT$3,280</span>
           </div>
           <div className="text-sm font-semibold text-brown-text/70 mb-10">
             優惠期限 : 2026.8.23 23:59 截止
